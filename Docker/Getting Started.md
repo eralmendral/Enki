@@ -21,3 +21,10 @@
 ### Setup
  - Follow documentation
  - Docker Playground 
+
+
+ ### Docker Images & Containers
+
+ - Image - shareable package
+ - Container - running application
+ 
