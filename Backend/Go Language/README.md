@@ -56,6 +56,11 @@ https://go.dev/doc/
             - GOOS=darwin god build
             - GOOS=linux go build
             - GOOS=windows go build
+
+ - Go install puts binary in $GOPATH/bin
+   - go install
+   - $GOPATH 
+
  - go help
    - go help env
    - go help environment
