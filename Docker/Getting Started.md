@@ -28,3 +28,30 @@
  - Image - shareable package
  - Container - running application
  
+
+ - RUN -  executed on building image
+ - CMD -  executed when containers is started
+
+
+ - docker build . 
+ - docker ps 
+
+ - Images are readonly, you can't update by just changing code. Need to rebuild new image every changes.
+ 
+
+### Image Layers
+ - Only the instructions that has changes and layers below it are re evaluated. (Caching)
+ - Layer based architecture - every instruction creates a layer.
+ 
+### Summary
+ - Code put into image
+ - Create an image using Dockerfile
+ - Dockerfile has detailed instructions / setup
+ - Docker is about containers
+ - But images are template of containers
+ - Instantiate and run multiple containers based on image
+ - Container is the running application - standalone
+ - Container does not copy the code from an image into a new container or new file
+ - The container will use the code used in the image, and use an extra layer and allocate resources to run that application but will not copy the code.
+ - Code only exists in the image.
+ 
