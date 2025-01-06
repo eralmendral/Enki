@@ -1,0 +1,31 @@
+
+### Images
+- docker tag
+- docker images
+- docker image inspect
+- docker rmi
+- docker prune
+
+
+### Containers 
+- docker ps
+- docker rm
+
+
+### Stopping and Restarting Containers
+- docker stop <container> -> 
+- docker start -> if image did not change, we don't need to re build container
+- docker run -> creates a new container based on an image
+
+### Attached and Detached Containers
+- Attached mode -> can see logs 
+- Detached mode -> docker run -d  - detached mode, cannot see logs 
+- Re attach -> docker attach <container_name>
+- By default, if you run a Container without -d, you run in "attached mode".
+- If you started a container in detached mode (i.e. with -d), you can still attach to it afterwards without restarting the Container with the following command:
+docker attach CONTAINER
+attaches you to a running Container with an ID or name of CONTAINER.
+
+
+### Logs
+- docker logs <container>
