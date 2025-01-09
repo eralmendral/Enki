@@ -46,8 +46,42 @@
 
 
  - Encapsulation
-    - 
- - Polymorphism
+    - To start a car, you only need to turn a key or press a button. You don't need to connect wires under the hood, rotate the crankshaft or cylinders , and initiate power cycle of the engine.
+    - These details are hidden under the hood of the car.
+    - You have only a simple interface: "a start switch, a steering wheel, and pedals"
+    - Ths illustrates how each object has a **interface** - a public part of an object, open to interactions with other objects.
+    - To encapsulate something means to make it private.
+
+
+
+
  - Inheritance
+   - is the ability to build new class on top of existing ones.
+   - Benefit is code reuse.
+   - Consequence you also implement all abstract methods of the superclass even if they don't make sense to you.
+   - If a superclass implements an interface, all of the subclass must also implement it.
+
+ 
+
+ - Polymorphism
+   - ability of the program to detect the real class of an object and call its implementation even when its real type is unknown in the current context.
+   - ability of an object to **pretend** to be something else, usually a class it extends or an interface it implements.
+
+
+### Relationships Between Objects
+   - Dependency, Association, Aggregation, Composition
+   - **Dependency** - weakest type of relations between classes. Occurs when you use concrete class names in your code.
+   - **Association** -  one object uses or interacts with another.
+   - **Aggregation** - specialize type of 'association' that represents **one to many**, **many to many** , or **whole part** relations between multiple objects.
+   - **Composition** - is a specific kind of aggregation where one object is composed of one or more instances of the other.
+      - The component can only exist as part of the container.
+      
+### Summary
+   - Dependency - Class A can be affected by changes in class B.
+   - Association - Object A knows about object B. Class A depends on B.
+   - Aggregation - Object A knows about object B, and consists of B. Class A depends on B.
+   - Composition - Object A knows about object B, consists of B, and manages B's Life Cycle. Class A depends on B.
+   - Implementation - Class A defines methods declared in interface B. Objects A can be treated as B. Class A depends on B.
+   - Inheritance - Class A inherits interface and implementation of class B but can extend it. Objects A can be treated as B. Class A depends on B.
 
 
