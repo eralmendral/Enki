@@ -12,4 +12,9 @@
   _ := 3 
 
 ### Printf for Decimals & Hexadecimals
- - 
+ 
+
+### Scope
+ - package block scope
+ - block scope
+
