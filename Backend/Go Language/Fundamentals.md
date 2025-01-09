@@ -18,3 +18,30 @@
  - package block scope
  - block scope
 
+
+
+### Working at the terminal
+ - GUI = Graphical User Interface
+ - CLI = Command Line Interface
+ - Two Flavors of Computers
+  - Unix/Linux/Mac
+    - shell , bash , terminal
+  - Windows
+    - command prompt, windows command, cmd , dos prompt
+
+
+### Permission Group
+ - d = directory
+ - r = read 
+ - w = write 
+ - x = execute
+ - rwxrwxrwx = owner, group, world
+  - Example : "drwxr-xr-x+" -> directory | owner can [read, write, exec] | group can [read, exec] | world can [read, write, exec]
+ - Giving Permissions
+  - r - 4
+  - w - 2
+  - x - 1
+  - chmod 777 notes.txt  -> owner (7) | group(4) | world (4)
+  - owner can "rwx" -> 4 + 2 + 1 -> 7
+  - group can "r--" -> read only  -> 4 
+  - world can "r--" -> read only -> 4
