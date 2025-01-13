@@ -14,4 +14,15 @@
   - go mod init
  - Modules have packages
  - namespacing  - [domain,repo]
- - 
+ 
+
+### Spaghetti Code
+ > Spaghetti code refers to a programming code that is complex, tangled and difficult to understand and maintain. The term spaghetti code is often used to describe code that has been written in haphazard and unstructured manner making it difficult for other programmers to understand and modify the code.
+ > It typically arises when the programmer does not follow a structured approach to software development and fails to organize the code into modular, reusable components. This can lead to software that is unreliable, inefficient, and prone to errors.
+ > The term "spaghetti code" is derived from the visual appearance of the code, which resembles a tangled mess of lines that are difficult to trace and follow, similar to a plate of spaghetti.
+ > To avoid spaghetti code, it is important for programmers to follow best practices for software development, such as structured approach, creating modular components, and documenting their code thoroughly.
+
+
+
+### Modular Code / Structured Programming
+ > 
