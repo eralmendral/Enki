@@ -25,4 +25,5 @@
 
 
 ### Modular Code / Structured Programming
- > 
+ > A **structured approach** to software development is a methodical and organized approach to writing software code. It involves breaking down a large softwware project into smaller, manageable tasks, and approach is to make the code more readable, maintanable and scalable, which helps to reduce errors and improve software quality.
+ 
