@@ -14,6 +14,7 @@
   - go mod init
  - Modules have packages
  - namespacing  - [domain,repo]
+ - go mod tidy
  
 
 ### Spaghetti Code
@@ -27,3 +28,52 @@
 ### Modular Code / Structured Programming
  > A **structured approach** to software development is a methodical and organized approach to writing software code. It involves breaking down a large softwware project into smaller, manageable tasks, and approach is to make the code more readable, maintanable and scalable, which helps to reduce errors and improve software quality.
  
+
+
+ ### Steps
+
+ > go mod init <module_url>
+
+
+ ### Control Flow
+  - if statements
+  - switch statements
+  - comparison operators
+  - logical operators
+  - statement;statement idiom
+  - comma,ok idiom
+  select statement fro concurrency communication
+  - 
+
+
+ ### Array & Slice
+
+
+ ### Map
+
+
+ ### Structs
+
+
+ ### Functions
+
+
+ ### Pointers 
+
+
+ ### Generics
+
+
+ ### Concurrency
+
+ 
+ ### Channels
+
+
+ ### Error Handling
+
+
+ ### Go Idioms
+
+ - Statement;statement
+ - Comma,ok
