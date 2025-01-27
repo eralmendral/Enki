@@ -31,3 +31,8 @@
 3. Prompts  - "user controlled" - pre-defined templates for AI interactions - (Documentation Q&A, Transcript Summary, Output as JSON).
 
 
+## LLM.txt
+- https://llmstxt.org/
+
+## mcpdoc
+- 
