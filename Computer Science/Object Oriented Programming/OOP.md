@@ -21,6 +21,8 @@
     - These are class **methods**.
  - Collectively , **fields** and **methods** can be referenced as the members of their class.
 
+ - Classes in OOP are all about grouping data and behavior together in one place: an object.
+ - "How can I write a Human class that holds the data and simulates the behavior of a real human?"
 
 <hr />
 
