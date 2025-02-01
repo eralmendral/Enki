@@ -1,0 +1,3 @@
+[submodule "Backend/Go Language/Go_Price_Calculator"]
+	path = Backend/Go Language/Go_Price_Calculator
+	url = git@github.com:eralmendral/Go_Price_Calculator.git
