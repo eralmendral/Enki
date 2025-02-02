@@ -304,6 +304,44 @@ https://go.dev/doc/
 - Blank identifer ->  _   // no return 
   _ := 3 
 
+
+### Type Sizes
+- integers, uints, floats, complex
+- Whole numbers (no decimals)
+  - int int8 int16 int32 int64
+- Positive numbers (unsigned)
+  - uint uint8 uint16 uint32 uint64 uintptr
+- Signed Decimals
+  - float32 float64
+- Imaginary Numbers
+  - complex64 complex128
+
+> The size (8, 16, 32, 64, 128, etc) represents how many bits in memory will be used to store the variable. The "default" int and uint types refer to their respective 32 or 64-bit sizes depending on the environment of the user.
+
+> The "standard" sizes that should be used unless you have a specific performance need (e.g. using less memory) are:
+
+
+```go
+int
+uint
+float64
+complex128
+```
+
+### Converting between types
+```go
+temperatureFloat := 88.26
+temperatureInt := int64(temperatureFloat)
+```
+
+### Default Types
+- bool, string, int, uint, byte, rune, float64, complex128
+
+
+### When Should I Use a More Specific Type?
+> When you're super concerned about performance and memory usage.
+> That’s about it. The only reason to deviate from the defaults is to squeeze out every last bit of performance when you are writing an application that is resource-constrained. (Or, in the special case of uint64, you need an absurd range of unsigned integers).
+
 ### Printf for Decimals & Hexadecimals
  
 
@@ -408,3 +446,23 @@ before the ASCII, different countries or places has different way of representin
 - other characters takes 16 or 24 bits.
 
 // read more here: https://blog.hubspot.com/website/what-is-utf-8
+
+
+### Compiled vs Interpreted
+
+> You can run a compiled program without the original source code. You don't need the compiler anymore after it's done its job. 
+
+> That's how most videogames are distributed! Players don't need to install the correct version of python to run a PC game: they just download the executable game and run it.
+
+> With interpreted languages like Python and Ruby, the code is interpreted at runtime by a separate program known as the "interpreter". Distributing code for users to run can be a pain because they need to have an interpreter installed, and they need access to the source code.
+
+> Examples of Compiled Languages
+Go
+C
+C++
+Rust
+> Examples of Interpreted Languages
+JavaScript (sometimes JIT-compiled, but a similar concept)
+Python
+Ruby
+
