@@ -466,3 +466,30 @@ JavaScript (sometimes JIT-compiled, but a similar concept)
 Python
 Ruby
 
+
+## Aggregate Types
+- composed types
+- data types that hold many values
+- arrays, slices, maps, structs
+
+### Arrays
+- numbered sequence of elements of the **same** type.
+- does not change in size.
+- used for Go Internals; generally not used in your code.
+
+
+
+### Slices
+- build on top of array, hold values of the **same** type.
+- changes in size, has a length and a capacity
+
+
+### Map
+- key - value
+- unordered group of values of one Type, called the element type, indexed
+
+
+### Struct
+- data structure
+- composite / aggregate
+- allow us to **collect values of different types together**
