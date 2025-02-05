@@ -1,12 +1,14 @@
 package main
 
-
 import "fmt"
 
 func main() {
-   a := []int(1,2,3,5)
+	// Creating a slice
+	slice := []int{1, 2, 3, 4, 5}
+	fmt.Println(slice)
 
-  fmt.Println("Slice:", a)
+	// Creating a slice with make
+	slice2 := make([]int, 0, 5)
 
-
+	fmt.Println(slice2)
 }

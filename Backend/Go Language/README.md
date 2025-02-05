@@ -492,4 +492,11 @@ Ruby
 ### Struct
 - data structure
 - composite / aggregate
-- allow us to **collect values of different types together**
+- allow us to **collect values of different types together**  
+- Topics:
+  - for range
+  - append
+  - slicing
+  - deleting
+  - make
+  - multidimensional slice
