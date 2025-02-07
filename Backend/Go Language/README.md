@@ -259,7 +259,9 @@ https://go.dev/doc/
 
 
  ### Array & Slice
-
+  - Slice is built on top of an array
+  - 
+  
 
  ### Map
 
@@ -482,6 +484,13 @@ Ruby
 ### Slices
 - build on top of array, hold values of the **same** type.
 - changes in size, has a length and a capacity
+- Topics:
+  - for range
+  - append   -> append(a, 4,5,6)
+  - slicing  -> a[1:4]
+  - deleting -> combination of append & slice
+  - make     ->
+  - multidimensional slice
 
 
 ### Map
@@ -493,10 +502,5 @@ Ruby
 - data structure
 - composite / aggregate
 - allow us to **collect values of different types together**  
-- Topics:
-  - for range
-  - append
-  - slicing
-  - deleting
-  - make
-  - multidimensional slice
+
+
