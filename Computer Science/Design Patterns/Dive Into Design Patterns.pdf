@@ -1,0 +1,59 @@
+**Summary of 'Dive Into Design Patterns'**
+
+**1. Introduction to OOP**
+- **Basics of OOP**: Defines objects and classes, explaining attributes (fields) and behaviors (methods).
+- **Pillars of OOP**: Abstraction, Encapsulation, Inheritance, and Polymorphism.
+- **Relations Between Objects**: Dependency, Association, Aggregation, and Composition.
+
+**2. Introduction to Design Patterns**
+- **What is a Design Pattern?**: Common solutions to recurring problems in software design.
+- **Why Learn Patterns?**: Improves code reuse, maintainability, and communication among developers.
+- **Classification**:
+  - Creational Patterns: Object creation mechanisms.
+  - Structural Patterns: Composition of classes/objects.
+  - Behavioral Patterns: Communication and responsibility delegation.
+
+**3. Software Design Principles**
+- **Encapsulate What Varies**: Isolate changing parts of a program to minimize impact.
+- **Program to an Interface, Not an Implementation**: Depend on abstractions for flexibility.
+- **Favor Composition Over Inheritance**: Reduce code coupling.
+- **SOLID Principles**:
+  - Single Responsibility Principle: One reason to change per class.
+  - Open/Closed Principle: Extend without modifying existing code.
+  - Liskov Substitution Principle: Subtypes must be replaceable without breaking functionality.
+  - Interface Segregation Principle: Clients shouldn't be forced to depend on unused methods.
+  - Dependency Inversion Principle: High-level modules shouldn’t depend on low-level modules.
+
+**4. Catalog of Design Patterns**
+- **Creational Patterns**:
+  - Factory Method: Interface for creating objects, with subclasses defining the exact type.
+  - Abstract Factory: Produces families of related objects.
+  - Builder: Constructs complex objects step-by-step.
+  - Prototype: Clones existing objects.
+  - Singleton: Ensures a single instance of a class.
+
+- **Structural Patterns**:
+  - Adapter: Converts interface of a class into another expected by a client.
+  - Bridge: Separates abstraction from implementation.
+  - Composite: Treats individual objects and compositions uniformly.
+  - Decorator: Adds behavior dynamically.
+  - Facade: Simplifies interactions with complex systems.
+  - Flyweight: Minimizes memory usage through object sharing.
+  - Proxy: Controls access to objects.
+
+- **Behavioral Patterns**:
+  - Chain of Responsibility: Passes requests along a chain of handlers.
+  - Command: Encapsulates requests as objects.
+  - Iterator: Provides a way to access elements sequentially.
+  - Mediator: Centralizes complex communication between objects.
+  - Memento: Captures an object's state for restoration.
+  - Observer: Defines dependency between objects.
+  - State: Allows object behavior to change dynamically.
+  - Strategy: Selects behavior at runtime.
+  - Template Method: Defines a skeleton of an algorithm.
+  - Visitor: Allows adding new operations without modifying objects.
+
+**5. Conclusion**
+- Design patterns help create flexible, reusable, and maintainable software.
+- Applying patterns depends on specific use cases and problem domains.
+
