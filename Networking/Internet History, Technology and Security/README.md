@@ -17,3 +17,8 @@
 - World War 2
 - BOMBE: Mechanical Computer
 - Colossus: Electronic Computer
+
+
+### OSI Model
+
+> The OSI model using the letter analogy. The OSI model is like sending a letter. The application layer is writing the letter, the presentation layer puts it in an envelope. The session layer makes sure it gets to the right person, the transport layer makes sure you don't send it twice and that Parts aren't lost the network. Layer figures out the best route the data link layer ensures, it goes to the right address and the physical layer is putting it in the mailbox. Is there anything else I can help you with today?
