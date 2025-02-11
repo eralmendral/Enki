@@ -409,3 +409,7 @@ temperatureInt := int64(temperatureFloat)
   - "&"  - gives us the address
   - "*"  - get the value stored at a memory address.
   - If p is a pointer to an integer then '*p' gives you the integer that 'p' points to.
+
+
+   - Pointers are reference types
+   - 
