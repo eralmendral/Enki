@@ -383,3 +383,29 @@ temperatureInt := int64(temperatureFloat)
 
 ### Functions
   - Reusable, has name, can call
+  - Named returns
+  - Naked returns
+  - Explicit returns
+  - Early returns - guard clauses
+  - Functions as values
+  - Anonymous Functions
+
+
+### Pointers
+  - What are pointers?
+    - To understand pointer, we have to understand a little bit about memory.
+    - Computer and how memory works?
+    - Why do we need memory when computing?
+    - 2 + 1 
+    - You need memory to store '2' , '+' , '1'
+    - As computer receives input, they have to store it somewhere.
+    - That's where memory comes.
+    - A pointer is a variable that holds the memory address.
+    - Allows you to directly manipulate memory.
+  - How do computers' store stuff in memory.
+  - There are different types of memory.
+  - Memory = RAM
+  - There are addresses where things are stored.
+  - "&"  - gives us the address
+  - "*"  - get the value stored at a memory address.
+  - If p is a pointer to an integer then '*p' gives you the integer that 'p' points to.
