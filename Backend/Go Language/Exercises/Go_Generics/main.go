@@ -1,8 +1,10 @@
 package main
 
 type myNumbers interface {
-	int | float64
+	~int | float64
 }
+
+type myAlias int
 
 func addInt(a, b int) int {
 	return a + b
@@ -21,10 +23,14 @@ func addGenericUsingInterface[T myNumbers](a, b T) T {
 }
 
 func main() {
+
+	var num myAlias = 1
+	println(num)
+
 	println(addInt(1, 2))
 	println(addFloat(1.1, 2.2))
 	println(addGeneric(1, 2))
 	println(addGeneric(1.1, 2.2))
-	println(addGenericUsingInterface(1, 2))
+	println(addGenericUsingInterface(num, 2))
 	println(addGenericUsingInterface(1.1, 2.2))
 }

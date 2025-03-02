@@ -416,5 +416,11 @@ temperatureInt := int64(temperatureFloat)
 
 
 ### Generics
+  - https://go.dev/doc/tutorial/generics
   - type constraint
   - type set using interface
+  - type alias and underlying constraints
+  - Package constraints
+    - https://pkg.go.dev/golang.org/x/exp/constraints
+  - Concrete type vs Interface type
+  
