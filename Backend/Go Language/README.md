@@ -413,3 +413,8 @@ temperatureInt := int64(temperatureFloat)
 
    - Pointers are reference types
    - 
+
+
+### Generics
+  - type constraint
+  - type set using interface
