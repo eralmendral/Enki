@@ -1,3 +1,7 @@
+<img src="https://github.com/user-attachments/assets/6dc41011-e0c2-41dc-a9a6-0a1d2e05cdd0" width="320px" />
+
+Eris in greek mythology is the goddess of strife and discord.
+
 ### Software
  - DSA, OOP, DP, SOLID
  - Clean Code
