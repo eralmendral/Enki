@@ -29,10 +29,6 @@ Eris in greek mythology is the goddess of strife and discord.
 
 ### Science
  - Electronics
- - Electricity
- - Electrons
- - Atoms
- - Quantum
 
 
 ### Personal Guides
