@@ -12,7 +12,7 @@ Eris in greek mythology is the goddess of strife and discord.
  - Methodologies
 
 ### Tools
- - ....
+ - Vim
 
 ### Hardware
  - CPU
@@ -23,7 +23,7 @@ Eris in greek mythology is the goddess of strife and discord.
 
 
 ### Networking
- - ....
+ - Docker
  - Cloud
  
 
@@ -42,9 +42,6 @@ Eris in greek mythology is the goddess of strife and discord.
  - C# when done with Java
  - Rust when comfortable with above
 
-
-### Terminologies
-- **Concurrency**: The ability of a system to handle multiple tasks at the same time. It involves managing the execution of multiple instruction sequences to improve the efficiency and performance of a system.
 
 <hr />
 
