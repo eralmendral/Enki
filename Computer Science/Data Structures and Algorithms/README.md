@@ -180,3 +180,35 @@ def print_names_twice(names):
 # this is a constant time lookup
 org = organizations[org_id]
 ```
+
+<hr />
+
+## Order Log N
+> O(log(n)) algorithms are only slightly slower than O(1), but much faster than O(n). They do grow according to the input size, n, but only according to the log of the input.
+
+- O(n):
+
+  
+| n | time |
+---- | -------|
+| 8 | 8ms |
+| 64 | 64ms |
+| 1024 | 1024ms |
+| 1048576 | 1048576ms |
+
+
+- O(log(n)):
+
+| n | time |
+|---- | ----- |
+| 8 | 3ms |
+| 64 | 6ms |
+| 1024 | 10ms |
+| 1048576 | 20ms |
+
+
+### Binary Search
+![image](https://github.com/user-attachments/assets/79baad50-172c-4534-ae59-ac18f94244c8)
+
+- A binary search algorithm is a common example of an O(log(n)) algorithm. Binary searches work on a pre-sorted list of elements.
+
