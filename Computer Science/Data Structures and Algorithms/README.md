@@ -242,3 +242,32 @@ def binary_search(target, arr):
             high = median - 1
     return False 
 ```
+
+<br>
+<hr />
+
+# Sorting Algorithms
+>Almost every action you take in a web app relies on sorted data. Just looking up a user's profile in a database likely relies on a sorted index (which we'll talk about in another course).
+
+- Fortunately, most programming languages provide their own standard sorting implementation. In Python, for example, we can use the sorted function:
+
+```python
+items = [1, 5, 3]
+print(sorted(items)) # [1, 3, 5]
+```
+
+## Bubble Sort
+> is a very basic sorting algorithm named for the way elements "bubble up" to the top of the list.
+> Bubble sort repeatedly steps through a slice and compares adjacent elements, swapping them if they are out of order. It continues to loop over the slice until the whole list is completely sorted. Here's the pseudocode:
+- Set **swapping** to True
+- Set **end** to the length of the input list
+- While **swapping** is True
+   - Set **swapping** to False
+   - For **i** from the 2nd element to end:
+     - If the **(i-1)** th element of the input list is greater than the **i** th element:
+        - Swap the **(i-1)** th element and the **i** th element
+        - Set **swapping** to True
+      - Decrement **end** by one
+- Return the sorted list.
+
+
