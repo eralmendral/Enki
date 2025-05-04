@@ -168,3 +168,15 @@ def print_names_twice(names):
 - In Big O analysis we drop all constants because while they affect the runtime, they don't affect the change in the runtime.
 - O(2 * n) -> O(n)
 - O(10 * n^2) -> O(n^2)
+
+
+<hr />
+
+## Order 1
+> O(1) means that no matter the size of the input, there is no growth in the runtime of the algorithm. This is also referred to as a "constant time" algorithm.
+> In Python, a dictionary offers the ability to look items up by key, which is an operation that is independent of the size of the dictionary:
+
+```python
+# this is a constant time lookup
+org = organizations[org_id]
+```
