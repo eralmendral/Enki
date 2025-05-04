@@ -84,3 +84,8 @@ It's not anymore magical than that.
 As the size of inputs grows, the algorithms become slower to complete (take longer to run). The rate at which they become slower is defined by their Big O category.
 
 For example, O(n) algorithms slow down more slowly than O(n^2) algorithms.
+
+
+
+<hr />
+
