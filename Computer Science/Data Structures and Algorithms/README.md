@@ -89,7 +89,7 @@ For example, O(n) algorithms slow down more slowly than O(n^2) algorithms.
 
 <hr />
 
-# O(n) - Order "n"
+## O(n) - Order "n"
  - O(n) is very common - When the number of steps in an algorithm grows at the same rate as its input size, it's classified as O(n).
 
 For example, our find min algorithm from earlier is O(n):
@@ -113,3 +113,18 @@ Then we can estimate the following:
 | find_min(10000 items)	| 2000 ms | 
 
 
+<hr />
+
+## O(n^2) - Order “N Squared”
+
+> O(n^2) grows in complexity much more rapidly. That said, for small and medium input sizes, these algorithms can still be very useful.
+
+> A common reason an algorithm falls into O(n^2) is by using a nested loop, where the number of iterations of each loop is equal to the number of items in the input:
+
+```python
+for person_one in persons:
+    for person_two in persons:
+        # every combination of people
+        # will go on a date... twice!
+        go_on_date(person_one, person_two)
+```
