@@ -212,3 +212,18 @@ org = organizations[org_id]
 
 - A binary search algorithm is a common example of an O(log(n)) algorithm. Binary searches work on a pre-sorted list of elements.
 
+- Pseudocode
+- Given two inputs:
+  1. A list of n elements sorted from least to greatest
+  2. A target value:
+
+ - Do the following:
+   1. Set low = 0 and high = n - 1.
+   2. While low <= high:
+    - Set median (the position of the middle element) to (low + high) // 2, which is the greatest integer less than or equal to (low + high) / 2
+    - If list[median] == target, return True
+    - Else if list[median] < target, set low to median + 1
+    - Otherwise set high to median - 1
+   3. Return False
+
+> At each iteration of loop, we halve the list. Which makes the algorithm O(log(n)). In other words, to add one more step to the runtime, we'd have to double the size of the input. Binary searches are fast.
