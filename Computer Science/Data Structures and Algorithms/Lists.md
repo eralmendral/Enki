@@ -7,3 +7,7 @@
 > In other words, lists start to struggle in two primary areas:
 1. When you need to frequently delete elements from the middle of the list
 2. When you need to frequently search for specific elements in the entire list
+
+### Why is index-lookup so much faster than iteration?
+- The computer can jump straight to the location of an index.
+- An index is like an address of an item in a list.
