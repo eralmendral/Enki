@@ -1,0 +1,14 @@
+### 
+- Almost every action you take in a web relies on a sorted data.
+- Just looking up a user's profile in a database likely relies on a sorted index.
+
+
+### Merge Sort
+- Recursive, Divide and Conquer algorithm.
+- Divide: divide the large problem in to smaller problems and recursively solve the smaller problems.
+- Conquer: combine the results of the smaller problems to solve the large problem.
+
+Steps:
+1. Divide the array into two equal halves 
+2. Recursively sort the two halves.
+3. 
