@@ -271,3 +271,41 @@ print(sorted(items)) # [1, 3, 5]
 - Return the sorted list.
 
 
+<hr/>
+
+Introduction to Data Structures
+
+> Data structures are just organizational tools that allow for more advanced algorithms.
+> A data structure is a data organization, management and storage format that enables efficient access and modification.
+> A collection of data values, the relationship among them, and the functions or operations that can be applied to the data.
+
+- Stores Data
+- Organizes data so it can be easily accessed and modified
+- Contains the algorithmic function to expose the ability to read and modify the data.
+
+- Some examples:
+
+1. Stacks - Last In, First Out (LIFO)
+2. Queues - First In, First Out (FIFO)
+3. Linked Lists - Chain of nodes, efficient for insert and deletes.
+4. Binary Trees - A tree where each node has up to 2 children.
+5. Red Black - A self balancing binary tree using colors.
+6. Hash Maps - A data structure that maps keys to values
+7. Tries - A tree used for storing and searching words efficiently
+8. Graphs - A collection of nodes connected by edges.
+
+
+### List: An ordered collection of items
+```python
+animals = ['cat', 'dog', 'mouse']
+```
+
+### Dictionary: Collections of key/value pairs
+```python
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+```
+
