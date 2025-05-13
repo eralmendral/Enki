@@ -77,15 +77,29 @@ It's not anymore magical than that.
 
 ### The following chart shows the growth rate of several different Big O categories. The size of the input is shown on the x axis and how long the algorithm will take to complete is shown on the y axis.
 
+
+
 [Big O Cheatsheet](https://www.bigocheatsheet.com/)
 
 ![image](https://github.com/user-attachments/assets/285db65c-f0c9-4413-ac57-b7df9d277edb)
+
+![image](https://github.com/user-attachments/assets/6611c7af-e2de-43d9-b723-7446003449d3)
+
 
 As the size of inputs grows, the algorithms become slower to complete (take longer to run). The rate at which they become slower is defined by their Big O category.
 
 For example, O(n) algorithms slow down more slowly than O(n^2) algorithms.
 
-
+| Big-O     | Name         | Description |
+|-----------|--------------|-------------|
+| O(1)      | constant     | **Best** – The algorithm always takes the same amount of time, regardless of how much data there is. Example: Looking up an item in a list by index |
+| O(log n)  | logarithmic  | **Great** – Algorithms that remove a percentage of the total steps with each iteration. Very fast, even with large amounts of data. Example: Binary search |
+| O(n)      | linear       | **Good** – 100 items, 100 units of work. 200 items, 200 units of work. This is usually the case for a single, non-nested loop. Example: Unsorted array search |
+| O(n log n)| "linearithmic" | **Okay** – Slightly worse than linear, but not too bad. Example: mergesort and other "fast" sorting algorithms |
+| O(n²)     | quadratic    | **Slow** – The amount of work is the square of the input size. 10 inputs, 100 units of work. 100 inputs, 10,000 units of work. Example: A nested for loop to find all ordered pairs in a list |
+| O(n³)     | cubic        | **Slower** – If you have 100 items, this does 100³ = 1,000,000 units of work. Example: Triple nested for loop for all ordered triples in a list |
+| O(2ⁿ)     | exponential  | **Horrible** – Avoid at all costs. Adding one to the input doubles the amount of steps. Example: Brute-force guessing results of n coin flips |
+| O(n!)     | factorial    | **Even More Horrible** – Becomes so slow so fast that it’s practically unusable. Example: Generating all permutations of a list |
 
 <hr />
 
