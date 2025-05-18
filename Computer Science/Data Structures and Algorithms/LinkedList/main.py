@@ -1,6 +1,10 @@
 from node import Node
 
 class LinkedList:
+  def add_to_head(self, node):
+    node.next = self.head
+    self.head = node
+  
   def add_to_tail(self, node):
     if not self.head:
       self.head = node
