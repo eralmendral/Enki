@@ -24,3 +24,4 @@
 
 
 ## You can find an item in a likedlist by Iterating through all the nodes by following the 'next' references.
+## Linkedt lists have a faster time complexity than regular lists when it comes to "Inserting/deleting items in the middle o fthe list".
