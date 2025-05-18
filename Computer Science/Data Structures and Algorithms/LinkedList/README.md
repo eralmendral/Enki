@@ -20,3 +20,7 @@
 ![image](https://github.com/user-attachments/assets/b3de4bd2-b21e-42ee-852b-8de73fbc6546)
 
 ![image](https://github.com/user-attachments/assets/58235da5-cecf-4b9e-979b-048b5419032b)
+
+
+
+## You can find an item in a likedlist by Iterating through all the nodes by following the 'next' references.
