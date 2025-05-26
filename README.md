@@ -2,6 +2,9 @@
 
 Eris in greek mythology is the goddess of strife and discord.
 
+### Artificial Intelligence
+ - 
+
 ### Software
  - DSA, OOP, DP, SOLID
  - Clean Code
