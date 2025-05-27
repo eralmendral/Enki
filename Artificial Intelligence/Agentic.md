@@ -46,3 +46,7 @@ Example:
 2. AI Workflows -> input -> process -> retrieve to other resource -> output
 4. AI Agents -> REASONING -> ACT(via tools) -> ITERATE
          
+
+##5 Types of AI Agents: Autonomous Functions & Real-World Applications
+
+1. 
