@@ -46,19 +46,4 @@ Eris in greek mythology is the goddess of strife and discord.
  - Rust when comfortable with above
 
 
-<hr />
-
-### 2025 Mastery
-
-### Chosen Language
-  - Go language
-
-
-### Chosen Tool
- - Docker
-
-
-### Chosen Concept
- - Networking
-
 
