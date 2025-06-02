@@ -4,6 +4,13 @@
 
 <br />
 
+## UI
+- how something looks
+
+## UX
+- how something works
+
+
 ## Skill
 - Contrast and Colors and how to use them effectively.
 - 
