@@ -6,3 +6,5 @@
 - coefficient - a number that is multiple by a variable
   
 - derivative - rate of change of a function at a point.
+
+- m = (y₂ - y₁) / (x₂ - x₁)
