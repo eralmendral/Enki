@@ -65,6 +65,16 @@
 ## Deep Learning
 - A subset of machine learning based on artificial neural networks
 
+## Deep Learning Model Types
+- Discriminative
+   - Used to classify or predict
+   - Typically trained on a dataset of labled data
+   - Larns the relationship between the features of the data points and the label.
+
+- Generative
+   - Generates new data that is similar to data it was trained on
+   - Understands distribution of data and how likely a given example is
+   - Predict next word in a sequence.
 
 
 ## Large Language Models (LLMs)
