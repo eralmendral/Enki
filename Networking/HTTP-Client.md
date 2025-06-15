@@ -168,15 +168,31 @@ Uniform Resource Identifiers
 A URI, or Uniform Resource Identifier, is a unique character sequence that identifies a resource that is (almost always) accessed via the internet.
 
 
-URIs come in two main types:
+## URIs come in two main types:
 
 - URLs
 - URNs
 
 ![image](https://github.com/user-attachments/assets/8ce49cac-550f-4eff-babb-c8cce96249ca)
 
+- URN - 
 
+### Sections of a URL
+- URLs have a quite a few sections. Some are quired, some are not.
 
+```go
+URL{
+	protocol: "http",
+	username: "testuser",
+	password: "testpass",
+	hostname: "testdomain.com",
+	port:     "8080",
+	pathname: "/testpath",
+	search:   "testsearch=testvalue",
+	hash:     "testhash",
+}
+
+```
 
 <hr />
 
@@ -190,7 +206,7 @@ In computing, web clients find other computesr over the internet using **Interne
 - Ex. https://netflix.com/action has a hostname 'netflix.com'. 
 - The https:// and /action portions aren't part of the domain name -> IP address mapping.
 
--  
+- 
 
 
 
