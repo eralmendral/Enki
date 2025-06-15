@@ -238,7 +238,16 @@ URL {
 
 - But technically, this is just a convention. The server could be configured to return any file or data given that path.
 
+<br/>
+
+### Query Parameters
+- Query parameters in a URL are not always present. In the context of websites, query paramters are often used for marketing analytics or for changing a variable on the web page.
+- Query parameters rarely change which page you're viewing, though they often will change the page's contents.
+
+
 <hr />
+
+
 
 # DNS
 = In the real world, we use physical addresses to help us find where a friend lives, where a business is located, or where a party is being thrown.
