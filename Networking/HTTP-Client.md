@@ -174,3 +174,51 @@ URIs come in two main types:
 - URNs
 
 ![image](https://github.com/user-attachments/assets/8ce49cac-550f-4eff-babb-c8cce96249ca)
+
+
+
+
+<hr />
+
+# DNS
+= In the real world, we use physical addresses to help us find where a friend lives, where a business is located, or where a party is being thrown.
+In computing, web clients find other computesr over the internet using **Internet Protocol** (IP) addersses. Each device connected to the internet has a unique IP address.
+
+
+## DomainNames and IP Addresses
+- A "domain name" or "host name" is just one portion of a URL. 	
+- Ex. https://netflix.com/action has a hostname 'netflix.com'. 
+- The https:// and /action portions aren't part of the domain name -> IP address mapping.
+
+-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
