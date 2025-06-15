@@ -234,7 +234,9 @@ URL {
 ### URL Paths
 - A URL's path mirrors the server's filesystem hierarchy.
 
-- Ex. 
+- For example, if the website https://exampleblog.com had a static web server running in its /home directory, then a request to https://exampleblog.com/site/index.html would probably return the file located at /home/site/index.html.
+
+- But technically, this is just a convention. The server could be configured to return any file or data given that path.
 
 <hr />
 
