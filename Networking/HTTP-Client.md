@@ -206,6 +206,21 @@ URL {
 | Fragment  | No                        |
 
 
+### The Protocol
+- "protocol" (also reffered to as the "scheme") is the first component of a URL. It defines the rules by ewhih the data being communicated is displayed, encoded or formatted.
+
+- Some examples of different URL procols:
+- http
+- ftp
+- mailto
+- https 
+
+- Not all schemes require a **"//"**
+- The "http" in a URL is always followed by "**://**".
+- All URls have the colon, but the "//" part is only included for schemes that have an 	[authority component](	https://www.rfc-editor.org/rfc/rfc3986#section-3.2).
+- The "**mailto**" scheme doesn't use an authority component, so it doesn't need the slashes.
+
+
 <hr />
 
 # DNS
