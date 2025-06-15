@@ -5,6 +5,14 @@ Networking
 
 - HTTP
 - JSON
+- DNS
+- URIs
+- Headers
+- Methods
+- Paths
+- HTTPs
+- Errors
+- cURL
  
 <hr />
 
