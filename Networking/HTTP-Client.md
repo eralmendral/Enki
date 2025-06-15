@@ -175,13 +175,11 @@ A URI, or Uniform Resource Identifier, is a unique character sequence that ident
 
 ![image](https://github.com/user-attachments/assets/8ce49cac-550f-4eff-babb-c8cce96249ca)
 
-- URN - 
-
 ### Sections of a URL
 - URLs have a quite a few sections. Some are quired, some are not.
 
 ```go
-URL{
+URL {
 	protocol: "http",
 	username: "testuser",
 	password: "testpass",
@@ -191,8 +189,22 @@ URL{
 	search:   "testsearch=testvalue",
 	hash:     "testhash",
 }
-
 ```
+
+- There are 8 main parts to a URL, though not all the sections are always present. Each piece plays a role in helping clients locate the droids resources they're looking for.
+![image](https://github.com/user-attachments/assets/3721a0ae-df9f-458b-a026-30745b1fc546)
+
+| Part      | Required                  |
+|-----------|---------------------------|
+| Protocol  | Yes                       |
+| Username  | No                        |
+| Password  | No                        |
+| Domain    | Yes                       |
+| Port      | No (defaults to 80 or 443)|
+| Path      | No (defaults to /)        |
+| Query     | No                        |
+| Fragment  | No                        |
+
 
 <hr />
 
@@ -205,8 +217,6 @@ In computing, web clients find other computesr over the internet using **Interne
 - A "domain name" or "host name" is just one portion of a URL. 	
 - Ex. https://netflix.com/action has a hostname 'netflix.com'. 
 - The https:// and /action portions aren't part of the domain name -> IP address mapping.
-
-- 
 
 
 
