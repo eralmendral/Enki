@@ -244,6 +244,14 @@ URL {
 - Query parameters in a URL are not always present. In the context of websites, query paramters are often used for marketing analytics or for changing a variable on the web page.
 - Query parameters rarely change which page you're viewing, though they often will change the page's contents.
 
+<br />
+### How Google Uses Query Parameters
+1. Open a new tab and go to https://google.com.
+2. Search for the term "hello world"
+3. Take a look at your current URL. It should start with https://www.google.com/search?q=hello+world
+4. Change the URL to say https://www.google.com/search?q=hello+universe
+5. Press "enter"
+- You should see new search results for the query "hello universe". Google chose to use query parameters to represent the value of your search query. It makes sense - each search result page is essentially the same page as far as HTML structure and CSS styling are concerned - it's just showing you different results based on the search query.
 
 <hr />
 
