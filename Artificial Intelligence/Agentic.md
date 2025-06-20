@@ -49,4 +49,12 @@ Example:
 
 ##5 Types of AI Agents: Autonomous Functions & Real-World Applications
 
-1. 
+1.
+
+
+
+
+
+
+
+ 
