@@ -277,31 +277,19 @@ In computing, web clients find other computesr over the internet using **Interne
 
 
 
+<br>
+<br>
+<hr>
 
+# HTTP Headers
+- [HTTP header](https://developer.mozilla.org/en-US/docs/Glossary/HTTP_header) allows client and servers to pass additional information with each request or response. Headers are just case-insensitive [key-value pairs](https://en.wikipedia.org/wiki/Name%E2%80%93value_pair) that pass additional [metadata](https://en.wikipedia.org/wiki/Metadata) about the request or response.
 
+- HTTP requests from a web browser automatically carry with them many headers, including but not limited to:
+- The type of client (e.g. Google Chrome)
+- The Operating system (e.g. Windows)
+- The preffered language (e.g. US English)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<br>
+## Headers in Go's net/http Package
 
 
