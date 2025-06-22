@@ -129,3 +129,65 @@ res.Header.Del("last-modified)
 
 
 ```
+
+
+## Making a GET Request in GO
+- There are two basic ways to make a Get request in Go.
+1. The simple but less powerful way: [http.Get](https://pkg.go.dev/net/http#Get)
+2. The verbose but more powerful way: [http.Client](https://pkg.go.dev/net/http#Client), [http.NewRequest](https://pkg.go.dev/net/http#NewRequest), and the [http.Client.Do](https://pkg.go.dev/net/http#Client.Do)
+
+- If all you need to do is make a simple *GET* request to a URL, **http.GET** will work:
+```go
+ resp, err := http.Get("https://jsonplaceholder.typidcode.com/users)
+```
+
+- If you need to customize things like headers, cookies, or timeouts, you'll want to create a custom [http.Client](https://pkg.go.dev/net/http#Client), and [http.NewRequest](https://pkg.go.dev/net/http#NewRequest), then use the client's [Do](https://pkg.go.dev/net/http#Client.Do) method to execute it.
+
+```go
+client := &http.Client {
+   Timeout: time.Second * 10,
+}
+
+req, err := http.NewRequest("GET", "https://jsonplaceholder.typicode.com/users", nil)
+if err != nil {
+   log.Fatal(err)
+}
+resp, err := client.Do(req)
+
+```
+
+## Decoding the JSON data
+
+```go
+package main
+
+import (
+ "encoding/json"
+ "net/http"
+)
+
+func getUsers(url string)([]User, error) {
+   res, err  := http.Get(url)
+   if err != nil {
+     return nil, err
+   }
+   defer res.Body.Close()
+   
+   var users []User
+
+
+   decoder := json.NewDecoder(res.Body)
+   err = decoder.Decode(&users)
+   
+   if err != nil {
+     return nil, err
+   }
+
+   return users, nil
+
+    
+ 
+
+}
+
+```
