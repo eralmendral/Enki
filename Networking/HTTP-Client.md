@@ -290,6 +290,42 @@ In computing, web clients find other computesr over the internet using **Interne
 - The preffered language (e.g. US English)
 
 <br>
-## Headers in Go's net/http Package
 
+## Why are Heders Useful?
+- Headers are useful for several reasons from design to securitt.
+- mostly used for [metadata](https://en.wikipedia.org/wiki/Metadata) about the request and response itself.
+- For example, let's say we wanted to ask for a player's level from the server. We need to send that player's ID to the server so it knows which layer to send back the information for.  
+
+
+<br>
+
+- [Auhentication](https://auth0.com/intro-to-iam/what-is-authentication) is a common use cae for headers. If I ask to upload an image to Facebook. I need to provide authentication information that I'm logged in, but that auth info isn't the request itself, it's just additional information about the request.
+
+
+<br>
+<hr>
+
+# HTTP Methods - GET
+- HTTP defines a set of [methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods). We must choos one to use each time we make an HTTP request. The most common ones include:
+- GET
+- POST
+- PUT
+- DELETE
+
+
+<br>
+- The [GET Method](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/GET) is used to "get" a representation of a specified resource. It doesn't take (remove) the data from the server but rather gets a representation, or copy, of the resource in its current state. A GET request is considered [safe](https://developer.mozilla.org/en-US/docs/Glossary/Safe/HTTP) method to call multiple times because it shouldn't alter the state of the server.
+
+## Why use HTTP methods?
+- The primary purpose of HTTP methods is to indiciate to the server what we want to do with the resource we're trying to interact with. At the end of the day, and HTTP method is just a string, like **GET, POST, PUT,** or **DELETE**, but by convention, backend developers write their server code so that the metohds correspond with different **"CRUD"** actions.
+- CRUD - Create, Read, Update, Delete
+| HTTP Method | CRUD Action |
+|-------------|-------------|
+| GET         | Read        |
+| POST        | Create      |
+| PUT         | Update      |
+| DELETE      | Delete      |
+
+- HTTP methods map to crud actions by convention.
+- To update a user account, I would probably use a **PUT** request.
 
