@@ -82,4 +82,6 @@
 - Agents can have tools, and tasks can have tools too.
 - Agents can be working with another Agents on different tasks.
 - Having more than one Agent is called a **Crew**.
-- 
+
+![image](https://github.com/user-attachments/assets/77cc95ef-faa7-422c-97a8-5bf0d0496bb8)
+
