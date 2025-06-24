@@ -85,3 +85,69 @@
 
 ![image](https://github.com/user-attachments/assets/77cc95ef-faa7-422c-97a8-5bf0d0496bb8)
 
+<br>
+
+## Multi-agent design patterns
+1. Sequential Patterns
+ - When you have one agent that does something and it pass to another agent, and the another agent pass to another agent.
+ - Ex: AI  powered document processing.
+ - 1. Agent #1 : Text Extraction from scan documents
+ - 2. Agent #2 : Pass to another agent which Summarizes the text.
+ - 3. Agent #3 : Then pass to another agent which Action Item Extraction.
+ - 4. Agent #4 : Finally to last agent that saves the data to database.
+
+<br>
+<hr/>
+
+2. Hierarchical Agent System
+ - Has a leader or manager agent that supervise multiple agents that has their own specific tasks.
+ - The **Sub Agents** will complete their tasks and report their results back to the **Manager Agent**.
+ - Example: "Writing a report for business decision making"
+ - You have your **Manager AI Agent** that receives Task and delegates it to sub agents.
+ - Sub-Agent 1: "Monitors market trends."
+ - Sub-Agent 2: "Monitoring/Analyzes customer sentiment."
+ - Sub-Agent 3: "Tracks internal performance metrics across the company. So it's understanding this specific product is how interplaying with other products within the company."
+ - Sub-Agent 4: "Compile reports of sub agent 1,2,3 together to report to the manager Agent."
+
+
+ <br>
+ <hr>
+
+ 3. Hybrid System
+  - Combines Sequential and Hierarchical together.
+  - Agents can collaborate top down as well as sequentially.
+  - Example: "Autonomous vechiles"
+  - At the top level, you might have AI agent that plans the overall route and traffic strategy for an autonomous vehicle.
+  - Then you have the **Sub Agents** that handle things like 'real-time Sensor Fusion', 'collission avoidance', 'road condition analysis'.
+  - You need to have a continous feedback loop: "The vehicle dynamically adjusts its behavior based on road conditions and unexpected obstacles."
+  - You need to have a lots of different little feedback loops between these different agents and then communicating continuously with the top level agent as well.
+  - This design pattern is really common in robotics, navigation systems, and adaptive AI systems, basically like in places where there's lots of moving parts.
+
+<br>
+<hr>
+
+4. Parallel Agent Design Systems
+- Agents working on different work strams independently.
+- Agents would be handling different parts of a task simultanesouly often to speed up processing
+- Example: "AI for large scale data analysis"
+- Utlimately at the end, merging everything together.
+
+<br>
+<hr>
+
+5. Asynchronous Multi-Agent Systems
+- This is when agents execute tasks independently and at different times.
+- System that's proven to handle uncertain conditions better than sequential or parallel approaches.
+- Example: "AI Powered Cyber Security Threat Detection"
+  - You got **Agent 1** that's monitoring Network traffic in real time.
+  - **Agent 2** that monitoring suspircous usage patterns and 
+  - **Agent 3** that's just randomly sampling and testing out different use cases.
+- When any of these agents picked up something anomalous they would flag it and then other things would happen after that. This type of Asynchronous design pattern is especially helpful for anything that requires real-time monitoring or self-healing systems.
+
+
+<br>
+<hr>
+- You can have these systems and link up these systems themselves and this called a **Float**.
+- This can result in really complex processing and results.
+- As you increase the complexity of the systems, you're also basically increasing the amount of chaos that's within it.
+
