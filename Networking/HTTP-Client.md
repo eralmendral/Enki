@@ -329,3 +329,7 @@ In computing, web clients find other computesr over the internet using **Interne
 - HTTP methods map to crud actions by convention.
 - To update a user account, I would probably use a **PUT** request.
 
+<br>
+
+## POST Request
+- 
