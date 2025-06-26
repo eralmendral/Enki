@@ -28,7 +28,30 @@
 - It uses **condition-action rules** to make decisions as well
 - But it also incorporates an internal model of the world and that's stored in the state component and that state component is updated by observing how the world actually evolves.
 - How the environment changes from one state to another.
+- Example Analogy: "Robotic Vaccum Cleaner"
 
 
 ![image](https://github.com/user-attachments/assets/6d277333-2643-4c0a-8e5f-ad472c5356e7)
+
+
+<br>
+<br>
+<hr>
+<br>
+<br>
+
+# Goal-Based 
+- Building on top of **Model Based Agent** by adding decision making but based on **Goals**
+- No more condition-action rules but **goals**.
+- The agent uses it's internal model, how the world evolves, what my actions do? Simulate future outcomes, essentially predicting: What it will be like if I do action A. What action will help me achieve my goal based on the current state and predicted future.
+- Example Analogy: "Self Driving Car"
+- Goal-based agents are widely used in robotics and simulations where a clear objective is set and adaptation to the environment is required.
+
+<br>
+<br>
+<hr>
+<br>
+<br>
+
+# Utility-Based Agent
 
