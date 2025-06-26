@@ -5,6 +5,14 @@ Networking
 
 - HTTP
 - JSON
+- DNS
+- URIs
+- Headers
+- Methods
+- Paths
+- HTTPs
+- Errors
+- cURL
  
 <hr />
 
@@ -168,9 +176,160 @@ Uniform Resource Identifiers
 A URI, or Uniform Resource Identifier, is a unique character sequence that identifies a resource that is (almost always) accessed via the internet.
 
 
-URIs come in two main types:
+## URIs come in two main types:
 
 - URLs
 - URNs
 
 ![image](https://github.com/user-attachments/assets/8ce49cac-550f-4eff-babb-c8cce96249ca)
+
+### Sections of a URL
+- URLs have a quite a few sections. Some are quired, some are not.
+
+```go
+URL {
+	protocol: "http",
+	username: "testuser",
+	password: "testpass",
+	hostname: "testdomain.com",
+	port:     "8080",
+	pathname: "/testpath",
+	search:   "testsearch=testvalue",
+	hash:     "testhash",
+}
+```
+
+- There are 8 main parts to a URL, though not all the sections are always present. Each piece plays a role in helping clients locate the droids resources they're looking for.
+![image](https://github.com/user-attachments/assets/3721a0ae-df9f-458b-a026-30745b1fc546)
+
+| Part      | Required                  |
+|-----------|---------------------------|
+| Protocol  | Yes                       |
+| Username  | No                        |
+| Password  | No                        |
+| Domain    | Yes                       |
+| Port      | No (defaults to 80 or 443)|
+| Path      | No (defaults to /)        |
+| Query     | No                        |
+| Fragment  | No                        |
+
+
+### The Protocol
+- "protocol" (also reffered to as the "scheme") is the first component of a URL. It defines the rules by ewhih the data being communicated is displayed, encoded or formatted.
+
+- Some examples of different URL procols:
+- http
+- ftp
+- mailto
+- https 
+
+- Not all schemes require a **"//"**
+- The "http" in a URL is always followed by "**://**".
+- All URls have the colon, but the "//" part is only included for schemes that have an 	[authority component](	https://www.rfc-editor.org/rfc/rfc3986#section-3.2).
+- The "**mailto**" scheme doesn't use an authority component, so it doesn't need the slashes.
+
+<br />
+
+### URL Ports
+- The port in a URL is a virutal point where network connections are made. Ports are managed by a computer's operating system and are numbered from  0 to 65535. (Though port 0 is reserved for the system API).
+
+- Whenever you connect to anotehr computer over a network, you're connecting to a specfic port on that comuputer, which is listened to by a program on that computer. A port can only be used by one program at a time, which is why there are so many possible ports.
+- The port component of a URL is often not visible when browsing normal sites on the internet, because 99% of the time you're using the default ports for the HTTP and HTTPs: 80 and 443 respectively.
+
+- Whenver you aren't using a default port, you need to specify it in URL. For example, port 8080 is often used by web developers when they're running their server in "test mode" on their machines."
+
+
+### URL Paths
+- A URL's path mirrors the server's filesystem hierarchy.
+
+- For example, if the website https://exampleblog.com had a static web server running in its /home directory, then a request to https://exampleblog.com/site/index.html would probably return the file located at /home/site/index.html.
+
+- But technically, this is just a convention. The server could be configured to return any file or data given that path.
+
+<br/>
+
+### Query Parameters
+- Query parameters in a URL are not always present. In the context of websites, query paramters are often used for marketing analytics or for changing a variable on the web page.
+- Query parameters rarely change which page you're viewing, though they often will change the page's contents.
+
+<br />
+### How Google Uses Query Parameters
+1. Open a new tab and go to https://google.com.
+2. Search for the term "hello world"
+3. Take a look at your current URL. It should start with https://www.google.com/search?q=hello+world
+4. Change the URL to say https://www.google.com/search?q=hello+universe
+5. Press "enter"
+- You should see new search results for the query "hello universe". Google chose to use query parameters to represent the value of your search query. It makes sense - each search result page is essentially the same page as far as HTML structure and CSS styling are concerned - it's just showing you different results based on the search query.
+
+<hr />
+
+
+
+# DNS
+= In the real world, we use physical addresses to help us find where a friend lives, where a business is located, or where a party is being thrown.
+In computing, web clients find other computesr over the internet using **Internet Protocol** (IP) addersses. Each device connected to the internet has a unique IP address.
+
+
+## DomainNames and IP Addresses
+- A "domain name" or "host name" is just one portion of a URL. 	
+- Ex. https://netflix.com/action has a hostname 'netflix.com'. 
+- The https:// and /action portions aren't part of the domain name -> IP address mapping.
+
+
+
+<br>
+<br>
+<hr>
+
+# HTTP Headers
+- [HTTP header](https://developer.mozilla.org/en-US/docs/Glossary/HTTP_header) allows client and servers to pass additional information with each request or response. Headers are just case-insensitive [key-value pairs](https://en.wikipedia.org/wiki/Name%E2%80%93value_pair) that pass additional [metadata](https://en.wikipedia.org/wiki/Metadata) about the request or response.
+
+- HTTP requests from a web browser automatically carry with them many headers, including but not limited to:
+- The type of client (e.g. Google Chrome)
+- The Operating system (e.g. Windows)
+- The preffered language (e.g. US English)
+
+<br>
+
+## Why are Heders Useful?
+- Headers are useful for several reasons from design to securitt.
+- mostly used for [metadata](https://en.wikipedia.org/wiki/Metadata) about the request and response itself.
+- For example, let's say we wanted to ask for a player's level from the server. We need to send that player's ID to the server so it knows which layer to send back the information for.  
+
+
+<br>
+
+- [Auhentication](https://auth0.com/intro-to-iam/what-is-authentication) is a common use cae for headers. If I ask to upload an image to Facebook. I need to provide authentication information that I'm logged in, but that auth info isn't the request itself, it's just additional information about the request.
+
+
+<br>
+<hr>
+
+# HTTP Methods - GET
+- HTTP defines a set of [methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods). We must choos one to use each time we make an HTTP request. The most common ones include:
+- GET
+- POST
+- PUT
+- DELETE
+
+
+<br>
+- The [GET Method](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/GET) is used to "get" a representation of a specified resource. It doesn't take (remove) the data from the server but rather gets a representation, or copy, of the resource in its current state. A GET request is considered [safe](https://developer.mozilla.org/en-US/docs/Glossary/Safe/HTTP) method to call multiple times because it shouldn't alter the state of the server.
+
+## Why use HTTP methods?
+- The primary purpose of HTTP methods is to indiciate to the server what we want to do with the resource we're trying to interact with. At the end of the day, and HTTP method is just a string, like **GET, POST, PUT,** or **DELETE**, but by convention, backend developers write their server code so that the metohds correspond with different **"CRUD"** actions.
+- CRUD - Create, Read, Update, Delete
+| HTTP Method | CRUD Action |
+|-------------|-------------|
+| GET         | Read        |
+| POST        | Create      |
+| PUT         | Update      |
+| DELETE      | Delete      |
+
+- HTTP methods map to crud actions by convention.
+- To update a user account, I would probably use a **PUT** request.
+
+<br>
+
+## POST Request
+- 

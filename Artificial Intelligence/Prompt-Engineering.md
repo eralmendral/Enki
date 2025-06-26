@@ -49,3 +49,35 @@ Text:
 ```{text}```
 """
 ```
+
+
+
+
+
+
+
+<br>
+<hr/>
+
+# Prompt Engineering Guide
+- [Prompt engineering guide link](https://promptingguide.ai/introduction/elements)
+
+- Crafting ideal inputs in order to get the most out of Large Language Models.
+- Prompt is what you use to communicate with AI.
+- A prompt can be very simple; like a question.
+- A prompt can be very complex; like having code, and different kind of templates.
+- Prompt creation is only one component of generative AI engineering.
+- Prompt engineering is a component of Generative AI.
+
+
+
+
+## Prompt can have:
+- Instructions
+- Question
+- Input Ddata
+- Example
+
+## Prompt Writing
+- A different approach to AI Prompt Writing
+- 
