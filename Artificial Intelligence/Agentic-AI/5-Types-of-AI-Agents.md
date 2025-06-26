@@ -9,6 +9,8 @@
 
 -> Environment (Precepts) -> Sensors [ what the world is like now? ] -> Condition-Action Rules [What action should I do now? ] -> Actuators ... -> Action -> [ Environment ] 
 
+![image](https://github.com/user-attachments/assets/759747f5-d952-4620-bd33-75ebf25e7194)
+
 
 - if (condition -> action structure
 - executed by **actuators** and results to an **action** and that action affects the **environment**. 
@@ -28,5 +30,5 @@
 - How the environment changes from one state to another.
 
 
-
+![image](https://github.com/user-attachments/assets/6d277333-2643-4c0a-8e5f-ad472c5356e7)
 
