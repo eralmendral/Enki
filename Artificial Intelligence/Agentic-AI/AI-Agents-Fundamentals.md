@@ -151,3 +151,18 @@
 - This can result in really complex processing and results.
 - As you increase the complexity of the systems, you're also basically increasing the amount of chaos that's within it.
 
+
+<br>
+
+<hr>
+
+![image](https://github.com/user-attachments/assets/6974b934-2445-403e-9594-df6a7a68a019)
+
+
+<br>
+
+![image](https://github.com/user-attachments/assets/1e7c0b06-8a02-4b5a-a82c-029527b2d689)
+
+<br>
+
+![image](https://github.com/user-attachments/assets/4d6fbc0c-2dba-4104-8344-ebe72b0cd5ef)
