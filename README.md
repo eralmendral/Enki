@@ -42,5 +42,7 @@
 
 
 ### Artificial Intelligence
- - 
+ - Generative
+ - Agentic
+ - LLMs
 
