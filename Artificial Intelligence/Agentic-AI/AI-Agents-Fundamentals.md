@@ -44,13 +44,13 @@
 
 <br>
 
-2. Tool Use
+2. Tool Use (API Calls)
 - Ex. Code Execution, Calculate things, Object detection, Web Generation, Accessing Calendars, Accessing Emails
 - What are the necessary tools it needs to accomplish these steps.
 
-3. Planning
+3. Planning (Decide on steps for task)
 
-4. Agent
+4. Agent (Multi-Agent Collaboration)
 
 
 <br>
