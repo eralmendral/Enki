@@ -195,3 +195,49 @@ if topic_dict['nasa'] == 1:
     print("ALERT: New NASA story!")
 
 ```
+
+
+
+<br>
+<hr>
+<br>
+
+# 1. Set the Role
+- Tell the AI who it should act as (e.g. copywriter, marketer, empathetic employee, etc.)
+```
+You are a marketing strategist with five years of of experience in building landing pages.
+```
+
+
+# 2. Define the Goal
+- Specify the tone you want the response to have (e.g., straightforward, friendly, apologetic, professonal)
+
+```
+You want to increase the conversion rate of this landing page through copywriting
+```
+
+# 3. Specific instructions
+ - Give the AI relevant details or context to include in the response (e.g., what the message is about, who the audience is, specific facts)
+
+
+```
+Please break it down into a structure with a different sections. I want bullet points for the main benefits.
+```
+
+<br>
+<hr>
+
+# Make the AI a Prompt Engineer for us.
+
+```
+You are a prompt engineer with 10 years of experience. Please write a prompt to be able to create a great landing page structure.
+
+Use the best practice for AI coding tools. 
+```
+
+<br>
+<hr>
+
+``` Please act like a direct response marketer. use a straightforward but friendly tone.```
+
+
