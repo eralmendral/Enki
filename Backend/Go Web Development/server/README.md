@@ -191,3 +191,23 @@ func getUsers(url string)([]User, error) {
 }
 
 ```
+
+<br>
+<hr>
+
+## Post Request
+```go
+package main
+
+import (
+ "bytes"
+ "encoding/json"
+ "net/http"
+ )
+
+ func createUser(url, apiKey string data User)User, error) {
+   
+   
+ }
+
+```
