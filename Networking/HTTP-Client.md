@@ -332,4 +332,82 @@ In computing, web clients find other computesr over the internet using **Interne
 <br>
 
 ## POST Request
-- 
+- An [HTTP POST request](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/POST) sends data to a server, typically to create a new resource.
+
+
+<br>
+### Adding a Body
+- The body of th request is the payload sent to the server. The special `Content-Type` header is is used to tell the server the format of the body: `application/json` for JSON data in our case. `POST` requests are generally not safe methods to call multiple times because that wuld create duplicate records.
+
+<br>
+
+## HTTP PUT
+- The HTTP [PUT](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/PUT) method creates or updates the target resource with the contents of the request's `body`. 
+
+### POST vs PUT
+- While `POST` and `PUT` are both used for creating resources, `PUT` is more common for updates and is [idempotent](https://developer.mozilla.org/en-US/docs/Glossary/Idempotent), meaning it's safe to make the same request multiple times without changing the server state more than once. 
+
+# HTTP Method Examples: POST vs PUT
+
+This example illustrates how `POST` and `PUT` behave differently when making repeated requests to the same resource.
+
+## POST Example
+
+```http
+POST /users/bob  # Create 'bob' user
+POST /users/bob  # Attempt to create duplicate 'bob' user
+POST /users/bob  # Attempt to create duplicate 'bob' user again
+```
+
+- POST is non-idempotent, meaning each call can result in a different outcome.
+
+- Repeated POST requests may create duplicates or return errors depending on server logic.
+
+<br>
+
+# PUT Request Example: Idempotent Behavior
+
+- This example demonstrates the idempotent nature of the HTTP `PUT` method by sending the same request multiple times to the same resource.
+
+
+```http
+PUT /users/bob  # Create 'bob' user if it doesn't exist
+PUT /users/bob  # Update 'bob' user with the same data
+PUT /users/bob  # Update 'bob' user with the same data again
+```
+
+<br>
+
+## DELETE
+- The `DELETE` method does exactly what you expect: it deletes a specified resource.
+
+<br>
+<hr>
+
+## # HTTP Status Codes
+
+The Status Code of an HTTP response tells the client whether or not the server was able to fulfill the request. Status codes are 3-digit numbers that are grouped into categories:
+
+- **100–199**: Informational responses. These are very rare.
+- **200–299**: Successful responses. Hopefully, most responses are 200's!
+- **300–399**: Redirection messages. These are typically invisible because the browser or HTTP client will automatically do the redirect.
+- **400–499**: Client errors. You'll see these often, especially when trying to debug a client application.
+- **500–599**: Server errors. You'll see these sometimes, usually only if there is a bug on the server.
+
+## Common HTTP Status Codes
+
+| Code | Name                  | Description                                                                 |
+|------|-----------------------|-----------------------------------------------------------------------------|
+| 200  | OK                    | Everything worked as expected.                                              |
+| 201  | Created               | A resource was created successfully, typically in response to a POST.      |
+| 301  | Moved Permanently     | The resource was moved; the new location is included in the response.       |
+| 400  | Bad Request           | The client made a mistake in their request.                                |
+| 401  | Unauthorized          | The client lacks valid authentication credentials.                         |
+| 404  | Not Found             | The requested resource doesn't exist.                                      |
+| 500  | Internal Server Error | Something went wrong on the server, likely a bug.                          |
+
+> 🔗 For a complete list of HTTP status codes, refer to the official documentation or [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
+
+
+<br>
+<hr>
