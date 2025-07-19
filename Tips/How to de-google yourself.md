@@ -31,3 +31,14 @@ Steps includes:
   
 
 ## 5. Further steps will be added for clean up.
+
+
+
+<hr>
+<br>
+## Review Checklist:
+[-] - Google drive photos
+[] - Google payments and subscriptions
+[] - Third party apps and services
+[] - Social media platforms
+
