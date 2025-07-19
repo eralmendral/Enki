@@ -27,6 +27,7 @@ Steps includes:
 ## 4. Removing gmail address from social media platforms.
 - Go to your social media account 'Facebook, Instagram, Tiktok, Youtube, X(Twitter), Pinterest, etc.'
 - Remove your email and replace it with a new email you choose.
+- Or you can entirely delete your social media account.
   
 
 ## 5. Further steps will be added for clean up.
