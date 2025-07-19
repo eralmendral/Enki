@@ -37,8 +37,9 @@ Steps includes:
 <hr>
 <br>
 ## Review Checklist:
-[-] - Google drive photos
-[] - Google payments and subscriptions
-[] - Third party apps and services
-[] - Social media platforms
+
+- [ ] - Google drive photos
+- [ ] - Google payments and subscriptions
+- [ ] - Third party apps and services
+- [ ] - Social media platforms
 
