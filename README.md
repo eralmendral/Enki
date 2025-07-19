@@ -42,5 +42,22 @@
 
 
 ### Artificial Intelligence
- - 
+ - Generative
+ - Agentic
+
+
+<hr>
+
+## Kaizen
+1. Read Security News
+2. IT Fundamentals - CompTIA+
+3. Network Deep Dive
+4. Basics of Programming & Scripting
+5. Operating Systems 
+6. Security Basics
+7. Cloud
+8. A.I.
+9. Linux Skills
+
+
 
