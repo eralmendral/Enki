@@ -24,3 +24,14 @@
 ## 💡 Best Practice
 - Use **automated testing** for repeatable, scalable checks.
 - Combine with **manual exploratory testing** for unpredictable issues and UI behavior.
+
+
+<br/>
+
+
+## Key Terms:
+1. Page objects
+2. waitFor
+3. Nested page object method calls (page, navigation)
+4. Abstracting data: move details to specific directory
+
