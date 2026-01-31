@@ -14,6 +14,8 @@ Without RAG, AI answers from memory (which can be outdated or wrong). With RAG, 
 
 ---
 
+# CH1: Preprocessing
+
 ## Keyword Search
 
 The simplest search method: find documents containing the exact words you typed.
@@ -38,6 +40,113 @@ The simplest search method: find documents containing the exact words you typed.
 
 ---
 
+## Text Processing
+
+Exact matching is too strict. Searching "The Alien" shouldn't exclude "the alien", "Alien", or "Aliens".
+
+**Analogy:** Like a smart assistant who knows you mean the same thing whether you say "running", "ran", or "runs".
+
+### The Processing Pipeline
+
+Clean up text so variations match the same keyword:
+
+| Step | What It Does | Example |
+|------|--------------|---------|
+| **Lowercase** | Ignore capitalization | "The Matrix" → "the matrix" |
+| **Remove punctuation** | Strip periods, commas, etc. | "Hello, world!" → "hello world" |
+| **Tokenization** | Split into individual words | "the matrix" → ["the", "matrix"] |
+| **Stop words** | Remove filler words (the, a, is) | ["the", "matrix"] → ["matrix"] |
+| **Stemming** | Reduce words to their root | ["running", "jumping"] → ["run", "jump"] |
+
+### Why Each Step Matters
+
+| Without This Step | Problem |
+|-------------------|---------|
+| No lowercase | "Bear" and "bear" are different |
+| Keep punctuation | "hello" and "hello!" don't match |
+| No tokenization | Can't search individual words |
+| Keep stop words | "The" clutters every result |
+| No stemming | "watch" won't find "watching" |
+
+---
+
+## Punctuation
+
+Simply remove all punctuation from text.
+
+| Before | After |
+|--------|-------|
+| Boots the bear! | Boots the bear |
+| The wonderful bear, Boots | The wonderful bear Boots |
+
+> **Note:** Edge cases like hyphens (e.g., "sci-fi") may need special handling, but we'll keep it simple for now.
+
+---
+
+## Tokenization
+
+Splitting text into smaller pieces called **tokens**.
+
+**Analogy:** Like cutting a sentence into individual word magnets for a fridge.
+
+| Input | Output |
+|-------|--------|
+| "The Matrix is a great movie!" | ["the", "matrix", "is", "a", "great", "movie"] |
+
+We use **word-based tokenization** for keyword search. Since we already handled lowercase and punctuation, tokens come out clean.
+
+> **Note:** LLM tokens are different—they don't map one-to-one with words. Don't confuse the two.
+
+---
+
+## Stop Words
+
+Not all tokens are useful. **Stop words** are common words with little meaning—we remove them.
+
+**Analogy:** Like filtering out "um" and "uh" from a conversation transcript.
+
+| High-Value Tokens | Low-Value (Stop Words) |
+|-------------------|------------------------|
+| bear, panda, london, protector | a, the, is, of, in |
+
+### Why Remove Them?
+
+Without removal, meaningless matches pollute results:
+
+| Query: "the bear" | Why It Matched |
+|-------------------|----------------|
+| "Jungle Bear" | matches "bear" ✅ |
+| "The Terminator" | matches "the" ❌ |
+
+Both match, but "Jungle Bear" is clearly more relevant. "The Terminator" only matched on a useless stop word.
+
+---
+
+## Stemming
+
+Reduce words to their **root form** so variations match each other.
+
+**Analogy:** Like recognizing that "ran", "running", and "runs" all mean the same action.
+
+| Variations | Stem |
+|------------|------|
+| running, runs, ran | run |
+| jumping, jumps, jumped | jump |
+| watching, watches, watched | watch |
+
+### Why Stem Words?
+
+Without stemming, valid results get missed:
+
+| Query: "running" | Problem |
+|------------------|---------|
+| "A River Runs Through It" | No match—"runs" ≠ "running" ❌ |
+| "Run Baby Run" | No match—"run" ≠ "running" ❌ |
+
+Both contain the concept, but different word forms prevent matches. Stemming fixes this.
+
+---
+
 ## Key Takeaway
 
-> Keyword search is fast and reliable for exact matches. But when you need understanding (not just matching), you need smarter techniques—that's where semantic search comes in.
+> Keyword search is fast and reliable for exact matches. Text processing makes it flexible enough to handle real-world messiness. But when you need understanding (not just matching), you need smarter techniques—that's where semantic search comes in.
