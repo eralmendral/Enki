@@ -150,3 +150,34 @@ Both contain the concept, but different word forms prevent matches. Stemming fix
 ## Key Takeaway
 
 > Keyword search is fast and reliable for exact matches. Text processing makes it flexible enough to handle real-world messiness. But when you need understanding (not just matching), you need smarter techniques—that's where semantic search comes in.
+
+---
+
+# Summary
+
+## What We Learned (In Plain English)
+
+**RAG** is like having a research assistant. Instead of guessing answers, AI looks up information first, then gives you a better response.
+
+**Preprocessing** is cleaning up text before searching—like organizing a messy closet so you can actually find things.
+
+### The 5 Cleaning Steps
+
+Think of searching like finding a recipe in a cookbook:
+
+| Step | What It Does | Everyday Example |
+|------|--------------|------------------|
+| **Lowercase** | Treats "PASTA" and "pasta" as the same | You don't care if the recipe title is capitalized |
+| **Punctuation** | Ignores commas, periods, etc. | "Pasta!" and "Pasta" are the same dish |
+| **Tokenization** | Breaks text into words | Looking for "chicken" in "Chicken Alfredo Pasta" |
+| **Stop Words** | Removes filler words like "the", "a", "is" | You search "pasta recipe", not "a pasta recipe" |
+| **Stemming** | Treats "baking", "baked", "bakes" as "bake" | Finding all baking recipes, not just ones that say "baking" |
+
+### Why Does This Matter?
+
+Without these steps, search is frustratingly literal:
+- Searching "Dogs" won't find "dogs" (wrong case)
+- Searching "running" won't find "run" (different form)
+- Searching "the cat" might return "The Matrix" (matched "the")
+
+With preprocessing, search becomes **forgiving**—like a helpful friend who understands what you meant, even if you didn't say it perfectly.
