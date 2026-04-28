@@ -1,0 +1,14 @@
+### Modes:
+1. Normal mode 
+2. Insert mode - "i,a"
+3. Command mode - ":"
+
+### Commands
+- w  -> write
+- q  -> quit
+- u  -> undo
+- red -> redo
+- 0 -> go to first of line
+- $ -> go to end of line
+
+
