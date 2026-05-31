@@ -89,10 +89,19 @@
 5. If they do, Claude finishes and wait for next prompt, if not, it loops back and tries again until result is complete.
 
 
-### Context
+
+### Context Management
 - conversation, file contents, command outputs, and more it can store and reference.
 - if limit is reached, claude code compacts your conversation automatically 
 
+#### Command to manage context
+ - /compact
+ - /clear
+ - /context
+
+### Tips for Saving Context Space
+ - Be Specific
+ - 
 
 ### Tools
 - Backbone of how agents work.
@@ -107,8 +116,38 @@
 - Plan mode
 
 
+------
 
-- 
+### Prompting
+- Auto Accept vs Approval
+- Try to be as descriptive as possible
 
 
+### Plan Mode
+- Takes the prompt and uses **read-only** tools.
+- Analyze codebase and research your suggested implementation.
+- Great for planning complex changes.
 
+
+### Daily Workflows
+- Explore -> Plan -> Code -> Commit
+
+#### Explore and Plan
+- use Plan mode
+- Claude will read relevant files, run some web searches
+- best place to course correct
+
+#### Code
+Tips:
+1. Define a success criteria
+2. Add tools. Example: Web UIs
+3. Include a Test Suite - make sure the tests are a reliable source of truth to avoid false positives.
+
+#### Commit
+- Once changes are tested, it's ready to commit push.
+- Run a "sub agent code reviewer" to look at your work.
+- subagent gets a fresh pair of eyes on the codebase — it doesn't carry the bias the main agent might have from the session.
+- get Claude code to generate commit message in your style.
+
+
+----
