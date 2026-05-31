@@ -1,9 +1,18 @@
+# Go Language Tutorial
+
 https://go.dev/doc/
 
-- efficient compilation
-- efficient execution
-- ease of programming
-- Built by Google
+## What is Go?
+
+Go is a programming language that is:
+- **Fast and lightweight** - small memory footprint, efficient execution
+- **Concurrent** - built-in support for concurrent programming with goroutines and channels
+- **Easy and simple** - clean syntax, ease of programming
+- **Compiled** - produces standalone executables
+- **Statically typed** - types are checked at compile time
+- **Garbage collected** - automatic memory management
+
+Built by Google.
 
 ### Timeline
 - 2005 - first dual core processors
@@ -11,44 +20,92 @@ https://go.dev/doc/
 - 2009 - open sourced (November)
 - 2012 - version 1
 
-### Terminologies
-- **Concurrency**
-  - design pattern, "you write code with concurrency design pattern"
-  - when you run that code in machines with multiple cores, that code can run in "parallel"
-- **Parallelism**
-  - running code on multiple cores in parallel
+---
 
-### Running Go Programs
-- `go mod init <some_name>`
-- create go file
-- `package main`
-  - folders are packages
-  - every file in a folder/package must have the same package name
-- `func main`
-  - dot notation: `package.function`
-  - CAPITALIZATION
-    - Visible outside package
-    - not visible outside package
-  - semi-colons: added by compiler
-- Running code
-  - VS Code / run
-    - view / debug console
-  - command line
-    - `go run main.go`
-    - `go run ./...` (builds executable and runs it)
-    - `go build` (builds executable)
-- Cross build / compile
-  - see environment variables: `go env GOARCH GOOS`
-  - run one of these at the command line to build to a certain OS:
-    - `GOOS=darwin go build`
-    - `GOOS=linux go build`
-    - `GOOS=windows go build`
-- `go install` puts binary in `$GOPATH/bin`
-  - `go install`
-  - `$GOPATH`
-- `go help`
-  - `go help env`
-  - `go help environment`
+## Tutorial Topics
+
+### Fundamentals
+- [Variables](./Go-Fundamentals/Variables.md) - declarations, types, constants
+- [Conditionals](./Go-Fundamentals/Conditionals.md) - if, switch, comparison operators
+- [Loops](./Go-Fundamentals/Loops.md) - for, range
+- [Functions](./Go-Fundamentals/Functions.md) - named returns, anonymous functions
+- [Errors](./Go-Fundamentals/Errors.md) - error handling
+
+### Data Structures
+- [Slices](./Go-Fundamentals/Slices.md) - dynamic arrays
+- [Maps](./Go-Fundamentals/Maps.md) - key-value pairs
+- [Structs](./Go-Fundamentals/Structs.md) - custom types, composition
+- [Interfaces](./Go-Fundamentals/Interfaces.md) - polymorphism
+
+### Advanced
+- [Pointers](./Go-Fundamentals/Pointers.md) - memory addresses
+- [Generics](./Go-Fundamentals/Generics.md) - type parameters
+- [Packages](./Go-Fundamentals/Packages.md) - modules and dependencies
+- [Channels](./Go-Fundamentals/Channels.md) - goroutine communication
+- [Mutexes](./Go-Fundamentals/Mutexes.md) - synchronization
+- [Concurrency](./Concurrency.md) - goroutines and parallelism
+
+---
+
+## Running Go Programs
+
+### Setup
+- `go mod init <module_name>` - initialize module
+- Create `.go` file with `package main`
+
+### Package Structure
+- Folders are packages
+- Every file in a folder/package must have the same package name
+- `func main` - entry point
+- CAPITALIZATION: `Exported` (visible) vs `unexported` (private)
+- Semi-colons: added by compiler
+
+### Commands
+```bash
+go run main.go       # compile and run
+go run ./...         # run all files
+go build             # compile to executable
+go install           # put binary in $GOPATH/bin
+go help              # help
+```
+
+### Cross Compilation
+```bash
+go env GOARCH GOOS   # see environment
+GOOS=darwin go build
+GOOS=linux go build
+GOOS=windows go build
+```
+
+---
+
+## Concepts
+
+### Concurrency vs Parallelism
+- **Concurrency** - design pattern for code that can handle multiple tasks
+- **Parallelism** - actually running code on multiple cores simultaneously
+
+### Compiled vs Interpreted
+Compiled programs produce standalone executables. You don't need the compiler or source code to run them.
+
+| Compiled | Interpreted |
+|----------|-------------|
+| Go, C, C++, Rust | Python, Ruby, JavaScript |
+| Faster execution | Requires interpreter |
+| Standalone binary | Needs source code |
+
+### What is Statically Typed?
+In statically typed languages, variable types are determined at compile time. The compiler checks type correctness before the program runs.
+
+```go
+var age int = 25      // type declared explicitly
+name := "Go"          // type inferred at compile time
+age = "hello"         // compile error - can't assign string to int
+```
+
+---
+
+## Reference
 
 ### Hash, Encryption, Communication
 > A Hash algorithm is a mathematical function that takes in a variable-sized input, such as a file or message, and produces a fixed-size output, known as a hash or digest.
@@ -174,83 +231,15 @@ https://go.dev/doc/
 ### Steps
 > `go mod init <module_url>`
 
-### Control Flow
-- if statements
-- switch statements
-- comparison operators
-- logical operators
-- statement;statement idiom
-- comma, ok idiom
-- select statement for concurrency communication
-
-### Array & Slice
-- Slice is built on top of an array
-
-### Map
-### Structs
-### Functions
-### Pointers
-### Generics
-### Concurrency
-### Channels
-### Error Handling
 ### Go Idioms
 - Statement;statement
 - Comma, ok
 
-### Variables, Zero Values, Blank Identifier
-- Go is a static typed language, not dynamic
-- A variable holds a value with a specific type
-  - `var num int = 10`
-- Declare -> `var num`
-- Assign a value -> `var num int = 10`
-- Short declaration -> Declare and Assign a value -> `num := 10` // declare var num, auto type to 'int' with value 10
-- Multiple assignments -> `a, b, c := 0, 1, 'test'`
-- Blank identifier -> `_` // no return 
-  `_ := 3`
+---
 
-### Type Sizes
-- integers, uints, floats, complex
-- Whole numbers (no decimals)
-  - `int int8 int16 int32 int64`
-- Positive numbers (unsigned)
-  - `uint uint8 uint16 uint32 uint64 uintptr`
-- Signed Decimals
-  - `float32 float64`
-- Imaginary Numbers
-  - `complex64 complex128`
+## System Concepts
 
-> The size (8, 16, 32, 64, 128, etc) represents how many bits in memory will be used to store the variable. The "default" int and uint types refer to their respective 32 or 64-bit sizes depending on the environment of the user.
-
-> The "standard" sizes that should be used unless you have a specific performance need (e.g. using less memory) are:
-
-```go
-int
-uint
-float64
-complex128
-```
-
-### Converting between types
-```go
-temperatureFloat := 88.26
-temperatureInt := int64(temperatureFloat)
-```
-
-### Default Types
-- `bool`, `string`, `int`, `uint`, `byte`, `rune`, `float64`, `complex128`
-
-### When Should I Use a More Specific Type?
-> When you're super concerned about performance and memory usage.
-> That’s about it. The only reason to deviate from the defaults is to squeeze out every last bit of performance when you are writing an application that is resource-constrained. (Or, in the special case of `uint64`, you need an absurd range of unsigned integers).
-
-### Printf for Decimals & Hexadecimals
-
-### Scope
-- package block scope
-- block scope
-
-### Working at the terminal
+### Working at the Terminal
 - GUI = Graphical User Interface
 - CLI = Command Line Interface
 - Two Flavors of Computers
@@ -311,100 +300,3 @@ temperatureInt := int64(temperatureFloat)
 - other characters take 16 or 24 bits
 - read more here: https://blog.hubspot.com/website/what-is-utf-8
 
-### Compiled vs Interpreted
-> You can run a compiled program without the original source code. You don't need the compiler anymore after it's done its job. 
-
-> That's how most video games are distributed! Players don't need to install the correct version of Python to run a PC game: they just download the executable game and run it.
-
-> With interpreted languages like Python and Ruby, the code is interpreted at runtime by a separate program known as the "interpreter". Distributing code for users to run can be a pain because they need to have an interpreter installed, and they need access to the source code.
-
-> Examples of Compiled Languages
-- Go
-- C
-- C++
-- Rust
-
-> Examples of Interpreted Languages
-- JavaScript (sometimes JIT-compiled, but a similar concept)
-- Python
-- Ruby
-
-### Aggregate Types
-- composed types
-- data types that hold many values
-- arrays, slices, maps, structs
-
-### Arrays
-- numbered sequence of elements of the **same** type.
-- does not change in size.
-- used for Go Internals; generally not used in your code.
-
-### Slices
-- build on top of array, hold values of the **same** type.
-- changes in size, has a length and a capacity
-- Topics:
-  - for range
-  - append -> `append(a, 4, 5, 6)`
-  - slicing -> `a[1:4]`
-  - deleting -> combination of append & slice
-  - make
-  - multidimensional slice
-
-### Map
-- key - value
-- unordered group of values of one Type, called the element type, indexed
-
-### Struct
-- data structure
-- composite / aggregate
-- allow us to **collect values of different types together**
-- Embedded structs
-- **Composition**
-  - refers to a way of structuring and building complex types by combining multiple simpler types. 
-  - is one of the fundamental principles of OOP
-  - Embedding one struct type within another.
-  - Done by using structs
-
-### Functions
-  - Reusable, has name, can call
-  - Named returns
-  - Naked returns
-  - Explicit returns
-  - Early returns - guard clauses
-  - Functions as values
-  - Anonymous Functions
-
-
-### Pointers
-  - What are pointers?
-    - To understand pointer, we have to understand a little bit about memory.
-    - Computer and how memory works?
-    - Why do we need memory when computing?
-    - 2 + 1 
-    - You need memory to store '2' , '+' , '1'
-    - As computer receives input, they have to store it somewhere.
-    - That's where memory comes.
-    - A pointer is a variable that holds the memory address.
-    - Allows you to directly manipulate memory.
-  - How do computers' store stuff in memory.
-  - There are different types of memory.
-  - Memory = RAM
-  - There are addresses where things are stored.
-  - "&"  - gives us the address
-  - "*"  - get the value stored at a memory address.
-  - If p is a pointer to an integer then '*p' gives you the integer that 'p' points to.
-
-
-   - Pointers are reference types
-   - 
-
-
-### Generics
-  - https://go.dev/doc/tutorial/generics
-  - type constraint
-  - type set using interface
-  - type alias and underlying constraints
-  - Package constraints
-    - https://pkg.go.dev/golang.org/x/exp/constraints
-  - Concrete type vs Interface type
-  

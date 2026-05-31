@@ -1,0 +1,33 @@
+# Editor/IDE files
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.iml
+
+# Compiled binaries
+*.exe
+*.out
+*.o
+*.a
+*.so
+*.dylib
+
+# Go binaries (named without extension)
+/Backend/**/main
+/Backend/**/out
+/Backend/**/ric.dev
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Dependencies
+node_modules/
+
+# Logs
+*.log
+
+# Misc
+task.todo

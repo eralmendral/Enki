@@ -43,6 +43,6 @@ jobs:
         working-directory: ./app
         run: npm ci
 
-      - name: Check and fix formatting
+      - name: Run Biome check
         working-directory: ./app
-        run: npm run format
+        run: npm run check

@@ -1,0 +1,266 @@
+# WALL-E Project .gitignore
+
+# =============================================================================
+# Build Artifacts
+# =============================================================================
+
+# C/C++ compiled files
+*.o
+*.obj
+*.so
+*.dylib
+*.dll
+*.a
+*.lib
+*.exe
+*.out
+a.out
+
+# Build directories
+build/
+build-Debug/
+build-Release/
+bin/
+obj/
+Debug/
+Release/
+dist/
+
+# Compiled binaries (from lessons)
+binary_operations
+number_systems
+program
+main
+test
+
+# Assembly and object files
+*.elf
+*.hex
+*.bin
+*.map
+*.lst
+
+# =============================================================================
+# IDE and Editor Files
+# =============================================================================
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# JetBrains IDEs (CLion, IntelliJ)
+.idea/
+*.iml
+*.iws
+cmake-build-*/
+
+# CodeLite
+.codelite/
+*.workspace
+*.workspace.layout
+*.project
+*.project.layout
+*.mk
+*.tags
+*.session
+compile_commands.json
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+.*.swp
+.*.swo
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# =============================================================================
+# Operating System Files
+# =============================================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+.directory
+.Trash-*
+
+# =============================================================================
+# Language-Specific
+# =============================================================================
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+*.egg
+*.egg-info/
+dist/
+.pytest_cache/
+
+# Node.js (if used for build tools)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =============================================================================
+# Simulation and Design Files (temporary)
+# =============================================================================
+
+# Logisim temporary files
+*.log
+*.circ~
+.logisim/
+
+# Proteus temporary files
+*.workspace
+Last Loaded*.pdsprj
+Backup Of*.pdsprj
+
+# KiCad temporary files
+*-rescue.lib
+*-rescue.dcm
+*-cache.lib
+*.bak
+*.kicad_pcb-bak
+*.kicad_sch-bak
+fp-info-cache
+
+# =============================================================================
+# Documentation Build Files
+# =============================================================================
+
+# LaTeX
+*.aux
+*.log
+*.toc
+*.out
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+
+# Markdown processors
+*.html
+site/
+.mkdocs/
+
+# =============================================================================
+# Temporary and Backup Files
+# =============================================================================
+
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+*~
+
+# =============================================================================
+# Hardware and Embedded
+# =============================================================================
+
+# Arduino
+*.hex
+*.eep
+*.elf
+
+# ESP32
+build/
+sdkconfig
+sdkconfig.old
+
+# ARM toolchain
+*.axf
+*.map
+
+# =============================================================================
+# Version Control
+# =============================================================================
+
+# Git
+*.orig
+*.rej
+
+# =============================================================================
+# Docker
+# =============================================================================
+
+# Docker files (keep Dockerfile, ignore builds)
+.dockerignore
+
+# =============================================================================
+# Logs and Databases
+# =============================================================================
+
+*.log
+*.sql
+*.sqlite
+*.db
+
+# =============================================================================
+# Personal Notes and TODO files
+# =============================================================================
+
+# Personal scratch files (but keep example TODO.md in lessons)
+scratch/
+notes.txt
+TODO.txt
+
+# =============================================================================
+# Archives
+# =============================================================================
+
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# =============================================================================
+# Keep These Files (Negation)
+# =============================================================================
+
+# Ensure we keep template and example files
+!tools/setup/templates/
+!**/Makefile
+!**/.clang-format
+
+# Keep specific documentation
+!README.md
+!LICENSE
+!CONTRIBUTING.md
+
+# Keep simulation files when properly named
+!*.circ
+!*.pdsprj

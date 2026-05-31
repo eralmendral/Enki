@@ -40,10 +40,11 @@ Steps includes:
 
 <hr>
 <br>
-## Review Checklist:
+## Cleaning Up Steps / Review Checklist:
 
-- [ ] - Google drive photos
-- [ ] - Google payments and subscriptions
-- [ ] - Third party apps and services
-- [ ] - Social media platforms
+- [ ] 1. Check Google Drive (photos, documents, important files)
+- [ ] 2. Check Google Payments and Subscriptions
+- [ ] 3. Check if email is linked to important accounts (third party apps, social media)
+- [ ] 4. Download backup data
+- [ ] 5. Delete entire Google account
 
