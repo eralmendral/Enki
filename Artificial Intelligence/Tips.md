@@ -4,7 +4,6 @@
 ## "The Output of AI is based on your Skill and Imagination"
 
 
-
 ## Automation
 
 1. Write down your entire process, like you're teaching someone how to do your job. (Including thought processes and creative processes)
