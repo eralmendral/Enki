@@ -1,7 +1,10 @@
-# Editor files
+# Editor/IDE files
 *.swp
 *.swo
 *~
+.idea/
+.vscode/
+*.iml
 
 # Compiled binaries
 *.exe
