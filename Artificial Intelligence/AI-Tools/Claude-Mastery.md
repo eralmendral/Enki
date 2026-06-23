@@ -260,3 +260,18 @@ The catch is the same as a phone: every app you install runs a little in the bac
 - Use the `CLAUDE_PROJECT_DIR` environment variable to reference project scripts so they work regardless of Claude's working directory. 
 
 > Bottom line: if something must happen every time without fail, put it in a hook, not a prompt.
+
+
+----
+
+
+### Coding Assistant
+
+
+
+----
+
+### Claude Cowork
+- Cowork turns Claude from a conversation into a hands-on working session where it plans and executes real tasks on your files, folders, and apps while you steer—and this course takes you from first launch to confident daily use.
+
+
