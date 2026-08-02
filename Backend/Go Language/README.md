@@ -1,5 +1,7 @@
 # Go Language Tutorial
 
+- [Go Fundamentals roadmap](Go-Fundamentals/Variables.md)
+
 https://go.dev/doc/
 
 ## What is Go?

@@ -1,224 +1,271 @@
-# Variables & Types
+# Go Language Fundamentals
 
-## Topics
-- Variables
-- Comments
-- Compilation Process
-- Type Sizes
-- Constants
-- Formatting Strings
-- Runes and String Encoding
+This is the recommended order for the Go language section. Each major topic has
+its own notes file in this directory.
 
----
+## 1. Getting Started
 
-## Variables
+- [Why Go?](#why-go)
+- [Compilation Process](#compilation-process)
+- [Compiled vs. Interpreted](#compiled-vs-interpreted)
+- [Memory Footprint](#memory-footprint)
+- [Comments](#comments)
 
-### Basic Types
-- `bool` - true/false
-- `string` - text
-- `int` - integers
-- `float64` - decimals
-- `byte` - alias for uint8
+### Why Go?
 
-### Variable Declaration (2 ways)
+Six useful answers:
 
-**1. var keyword**
+1. Fast compilation
+2. Efficient execution
+3. Simple language design
+4. Built-in concurrency support
+5. Strong tooling and formatting
+6. Easy deployment as a single compiled binary
+
+### Compilation Process
+
+```text
+Go source code -> go build/compiler -> machine-code executable
+```
+
+A Go program normally starts with:
+
 ```go
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Println("Hello, Go")
+}
+```
+
+Compilation errors are detected before the program runs. Runtime errors happen
+after the executable has started.
+
+### Compiled vs. Interpreted
+
+- A compiled language turns source code into an executable before it runs.
+- An interpreted language runs source code through an interpreter at runtime.
+- Go is compiled, so the production environment does not need the Go compiler
+  or the original source code to run the executable.
+
+### Memory Footprint
+
+Go binaries include the Go runtime, including services such as garbage
+collection. Go programs are generally lightweight, but the final binary size
+depends on the imported packages and build configuration.
+
+### Comments
+
+```go
+// This is a single-line comment.
+
+/* This is a
+   multi-line comment. */
+```
+
+## 2. Variables and Types
+
+The topics below form the variables and types foundation.
+
+### Variable Declaration
+
+```go
+var age int
 var name string = "Eric"
-var age int = 25
-var isActive bool = true
 ```
 
-**2. Short declaration (walrus operator)**
+### Basic Variables
+
+Common basic types include `bool`, `string`, `int`, `float64`, `byte`, and
+`rune`.
+
 ```go
+var active bool = true
+var name string = "Eric"
+var age int = 30
+var score float64 = 99.5
+var initial byte = 'E'
+```
+
+### Short Variable Declaration
+
+The `:=` syntax declares and initializes a variable inside a function. Go
+infers its type.
+
+```go
+pi := 3.14
 name := "Eric"
-age := 25
-isActive := true
 ```
 
-### Same Line Declarations
+### Same-Line Declarations
+
 ```go
-age, name := 10, "Eric"
-x, y, z := 1, 2, 3
+age, name := 30, "Eric"
 ```
+
+At least one variable on the left side of `:=` must be new in that scope.
 
 ### Blank Identifier
+
+Use `_` when a returned value is intentionally ignored.
+
 ```go
-_, value := someFunction()  // ignore first return value
+_, value := someFunction()
 ```
 
----
+### Statically Typed
 
-## Comments
+Go is statically typed: every variable has a type known by the compiler, and
+incompatible values must be converted explicitly.
 
-### Single Line
-```go
-// This is a single line comment
-```
-
-### Multi Line
-```go
-/*
-  This is a
-  multi-line comment
-*/
-```
-
----
-
-## Compilation Process
-
-Code -> Compiler (`go build`) -> Executable
-
-### Go Program Structure
-1. `package main` - declares the package
-2. `import "fmt"` - import packages
-3. `func main()` - entry point
-
-### Two Kinds of Bugs
-1. **Compilation errors** - occur when code is compiled. Better to catch here as they won't reach production.
-2. **Runtime errors** - occur when program is running. Can cause crashes or unexpected behavior.
-
----
-
-## Type Sizes
-
-### Whole Numbers (No Decimals)
-`int` `int8` `int16` `int32` `int64`
-
-### Positive Whole Numbers (Unsigned)
-`uint` `uint8` `uint16` `uint32` `uint64` `uintptr`
-
-### Decimal Numbers
-`float32` `float64`
-
-### Complex Numbers
-`complex64` `complex128`
-
-> The size (8, 16, 32, 64, 128) represents how many **bits** in memory will be used. The default `int` and `uint` types use 32 or 64 bits depending on the system.
-
-### Which Type Should I Use?
-Standard types (use these by default):
-```go
-int
-uint
-float64
-complex128
-```
-
-> Only use specific sizes when concerned about performance and memory usage, or when you need a specific range (e.g., `uint64` for very large positive integers).
-
-### Type Conversion
 ```go
 temperatureFloat := 99.11
 temperatureInt := int64(temperatureFloat)
 ```
 
----
+### Type Sizes
 
-## What is Statically Typed?
+- Whole numbers: `int`, `int8`, `int16`, `int32`, `int64`
+- Unsigned whole numbers: `uint`, `uint8`, `uint16`, `uint32`, `uint64`,
+  `uintptr`
+- Decimal numbers: `float32`, `float64`
+- Complex numbers: `complex64`, `complex128`
 
-Go is statically typed - types are determined at **compile time**, not runtime.
+The number in a type name represents its bit width. `int` and `uint` are
+platform-dependent; use a specific width when the representation matters.
+
+### Runes and String Encoding
+
+Strings are sequences of bytes. A `rune` is an alias for `int32` and represents
+a Unicode code point, so it is useful when working with individual characters.
 
 ```go
-var age int = 25      // type declared
-name := "Go"          // type inferred at compile time
-age = "hello"         // COMPILE ERROR - can't assign string to int
-```
+for _, r := range "Hello" {
+	fmt.Printf("%c ", r)
+}
 
-Benefits:
-- Catch type errors before running
-- Better performance (no runtime type checking)
-- IDE support and autocompletion
+## 3. Constants and Formatting
 
----
+### `const`
 
-## Constants
-
-Declared with `const` keyword. Cannot use `:=` syntax.
+Constants are declared with `const` and cannot use `:=`.
 
 ```go
 const pi = 3.14159
-const maxRetries = 3
 ```
 
-- Can be: strings, integers, booleans, floats
-- Cannot be: slices, maps, structs
-
 ### Computed Constants
+
+Constant expressions are evaluated at compile time.
+
 ```go
 const firstName = "Eric"
 const lastName = "Almendral"
 const fullName = firstName + " " + lastName
 ```
 
-> Cannot declare constants computed at runtime:
+Runtime values cannot be constants:
+
 ```go
-const currentTime = time.Now()  // ERROR - computed at runtime
+// const currentTime = time.Now() // invalid: evaluated at runtime
 ```
 
----
+### Formatting
 
-## Concatenating Strings
+`fmt.Printf` prints a formatted value; `fmt.Sprintf` returns the formatted
+string.
+
+| Verb | Meaning |
+|---|---|
+| `%v` | Default value format |
+| `%s` | String |
+| `%d` | Integer |
+| `%f` | Floating-point number |
+| `%.2f` | Floating-point number with two decimals |
 
 ```go
-first := "Hello"
-second := "World"
-result := first + " " + second  // "Hello World"
+message := fmt.Sprintf("%s is %d years old", "Eric", 30)
+fmt.Printf("Pi: %.2f\n", 3.14159)
 ```
 
----
+## 4. Conditionals and Control Flow
 
-## Formatting Strings in Go
+- [Conditionals](Conditionals.md)
+- [Loops](Loops.md)
+- `if` / `else`
+- Initial statements
+- `switch`
 
-### Functions
-- `fmt.Printf` - prints formatted string to stdout
-- `fmt.Sprintf` - returns formatted string
-
-### Format Verbs
-| Verb | Description | Example |
-|------|-------------|---------|
-| `%v` | Default format | `fmt.Printf("%v", 42)` |
-| `%s` | String | `fmt.Printf("%s", "hello")` |
-| `%d` | Integer (decimal) | `fmt.Printf("%d", 42)` |
-| `%f` | Float | `fmt.Printf("%f", 3.14)` |
-| `%.2f` | Float (2 decimals) | `fmt.Printf("%.2f", 3.14159)` |
+### `if` / `else`
 
 ```go
-name := "Alice"
-age := 30
-s := fmt.Sprintf("Name: %s, Age: %d", name, age)
-```
-
----
-
-## Runes and String Encoding
-
-In many languages, a "character" is a single byte (8 bits). ASCII encoding represents 128 characters with 7 bits - enough for English alphabet, numbers, and special characters.
-
-### Go's Approach
-- Strings are sequences of bytes
-- `rune` type is an alias for `int32` (32-bit integer)
-- Large enough to hold any Unicode code point
-
-### Key Takeaways
-1. Use `rune` type when working with individual characters (can be more than one byte)
-2. Go handles Unicode characters (emojis, Chinese, etc.) natively
-
-```go
-s := "Hello"
-for _, r := range s {
-    fmt.Printf("%c ", r)  // prints each character
+if age >= 18 {
+	fmt.Println("adult")
+} else {
+	fmt.Println("minor")
 }
 ```
 
----
+### Initial Statement
 
-## Memory Footprint
+An `if` statement may declare a short-lived value before its condition.
 
-Go programs are lightweight. Each executable includes a small "Go Runtime" that:
-- Manages goroutines
-- Includes a **garbage collector** that automatically frees unused memory
-- Handles memory allocation
+```go
+if length := len(name); length > 0 {
+	fmt.Println("name is set")
+}
+```
 
-> This is why Go is described as "garbage collected" - you don't manually free memory like in C/C++.
+### `switch`
+
+```go
+switch day {
+case "Saturday", "Sunday":
+	fmt.Println("weekend")
+default:
+	fmt.Println("weekday")
+}
+```
+
+## 5. Core Language Features
+
+1. [Functions (21)](Functions.md)
+2. [Structs](Structs.md)
+3. [Interfaces](Interfaces.md)
+4. [Errors](Errors.md)
+5. [Loops](Loops.md)
+6. [Slices](Slices.md)
+7. [Maps](Maps.md)
+8. [Pointers](Pointers.md)
+
+## 6. Packages, Modules, and Concurrency
+
+1. [Packages and Modules](Packages.md)
+2. [Channels](Channels.md)
+3. [Mutexes](Mutexes.md)
+
+The concurrency sequence is:
+
+```text
+goroutines -> channels -> shared state -> mutexes
+```
+
+## 7. Advanced Language Features
+
+1. [Generics](Generics.md)
+2. [Enums](Enums.md)
+
+Go does not have a dedicated `enum` keyword. Enumerated values are commonly
+modeled with a named type, `const`, and `iota`.
+
+```go
+type Status int
+
+const (
+	Pending Status = iota
+	Running
+	Done
+)
+```
