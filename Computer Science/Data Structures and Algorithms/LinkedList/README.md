@@ -1,6 +1,7 @@
 ## Linked List
 - A collection of ordered items, so it's similar to a normal list ('also called an array or slice in another language').
 - A linked list is where elements are not stored to each other in memory, instead, each item references the next in a chain.
+- You can find the next item by iterating the nodes by following the 'next' reference.
 
 - ![image](https://github.com/user-attachments/assets/fbc5e8a6-4e7b-453c-91bb-292d2e449426)
 
