@@ -95,4 +95,4 @@ x  ->   f    -> y "y-hat"
   - Linear regression with one variable
   - Univariate linear regression
 
-
+![img.png](img.png)
