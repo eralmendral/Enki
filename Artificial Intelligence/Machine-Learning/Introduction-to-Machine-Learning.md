@@ -96,3 +96,4 @@ x  ->   f    -> y "y-hat"
   - Univariate linear regression
 
 ![img.png](img.png)
+
