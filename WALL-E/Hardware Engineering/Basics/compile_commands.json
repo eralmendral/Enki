@@ -1,0 +1,5 @@
+[{
+		"file":	"/Users/mitra/Projects/Hardware Engineering/Basics/main.cpp",
+		"directory":	"/Users/mitra/Projects/Hardware Engineering/Basics",
+		"command":	"/usr/bin/llvm-g++ -c \"/Users/mitra/Projects/Hardware Engineering/Basics/main.cpp\" -o \"/Users/mitra/Projects/Hardware Engineering/Basics/main.cpp\".o -target arm64-apple-darwin24.2.0 -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -I/Library/Developer/CommandLineTools/usr/lib/clang/16/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/usr/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -I. -I.  -O0  -gdwarf-2  -std=c++11  -Wall"
+	}]
