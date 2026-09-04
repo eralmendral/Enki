@@ -134,3 +134,63 @@
 - Ex: trained to navigate web UI or make changes to a doc through the GUI
 - Applications: Software agents, virtual assitants, automation
 
+---
+
+### Autonomous Teammates
+1. The Evolution of AI
+2. Enter Agentic AI
+3. Great Software Shift
+4. Care & Feeding of Agents
+5. Managing Infinite Minds
+
+
+### 1. Evolution of AI "Building the Foundation"
+
+#### Discriminitive AI
+- Classify or predict existing data by drawing lines between categories.
+- Predicts existing data, categorizes spam, cannot create new data
+- Example: inbox filters spams, phone magically group cat picture
+- Cons: Cannot create something, it can only pick from specific actions it was explicitly thought.
+
+
+#### Generative AI
+- Models data distribution to create novel data that looks like the original
+- Learns data patterns
+- Creates variations
+- Requires a prompt
+
+
+
+### 2. Agentic AI
+- A new paradigm
+- Proactively plans, executes, and iterates on multi-step actions for a goal.
+- You just give it a goal.
+- It autonomously research prospects on its own.
+- Drafts highly personalize email for everyone. 
+- Physically hit send and when the prospect replies the AI negotiates and schedules the meeting on your calendar.
+
+| This transforms AI from a sophisticated tool into an autonomous teammate.
+
+
+### 3. Great Software Shift
+- Using to collaborating
+- Old way is "GPS Direction" - micro manage single step
+- New way is "Destination Focus" (take me to airport)
+- Old way is "Deterministic" - Ex: Calculator (always right)
+- New way (agentic) is "not always right in accuracy" - Ex: Human Intern (smart, but makes mistakes), don't blindly follow
+- Old way - plumbing (fix the leak)
+- New way - teaching (explain why it was wrong until it learns and adapts)
+
+
+### 4. Care & Feeding of Agents
+- Nurturing Your AI
+- Old way -> Archives (static file storage)
+- New way -> Diet (eats junk data, gets sick) -> outputs can become unreliable
+- Old way -> Rock (stays the same)
+- New way -> Plant (dies if you do not water it)
+
+
+### 5. Managing Infinite Minds
+- Managers of Infinite Minds
+- Our job is transitioning from "operators of machine" to "managers of infinite minds"
+- Managing tireless digital interns
